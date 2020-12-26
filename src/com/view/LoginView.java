@@ -11,8 +11,8 @@ import java.awt.event.ActionListener;
 public class LoginView extends JFrame
 {
     private JPanel loginPanel;
-    private JTextField textField1;
-    private JPasswordField passwordField1;
+    private JTextField txtUsername;
+    private JPasswordField txtPassword;
     private JButton btnLoad;
     private JButton btnCancel;
     private LoginView loginView;
@@ -44,7 +44,7 @@ public class LoginView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                textField1.setText(Database.getInstance().temp);
+                txtUsername.setText(Database.getInstance().temp);
 
             }
         });
