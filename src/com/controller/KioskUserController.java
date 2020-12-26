@@ -5,6 +5,10 @@ import com.model.Payment;
 import com.model.Receipt;
 import com.model.Item;
 import com.model.Stock;
+import com.view.KioskView;
+import com.view.LoginView;
+
+import javax.swing.*;
 
 public class KioskUserController
 
@@ -16,6 +20,10 @@ public class KioskUserController
     public Payment payment;
 
     public Receipt receipt;
+
+    public LoginView loginView;
+
+    public KioskView kioskView;
 
     public void Scan()
     {
@@ -33,9 +41,23 @@ public class KioskUserController
 
     }
 
-    public void ChangePage()
+    public void InitialiseGui()
     {
+        kioskView = new KioskView();
+        //kioskView.setVisible(true);
 
+        loginView = new LoginView();
+
+    }
+
+    public void ChangePage(JFrame currentPage, JFrame targetPage)
+    {
+        currentPage.setVisible(false);
+
+
+        targetPage.setVisible(true);
+
+        currentPage.dispose();
     }
 
     public void UpdateView()

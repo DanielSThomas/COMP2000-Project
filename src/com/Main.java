@@ -1,5 +1,6 @@
 package com;
 
+import com.controller.KioskUserController;
 import com.view.KioskView;
 
 import javax.swing.*;
@@ -13,15 +14,9 @@ public class Main
     public static void main(String[] args)
     {
 
-        KioskView kioskView;
-
-        kioskView = new KioskView();
-
-
-
-        //kioskView.setVisible(true);
-
-
+        KioskUserController kioskUserController = new KioskUserController();
+        kioskUserController.InitialiseGui();
+        kioskUserController.ChangePage(kioskUserController.loginView, kioskUserController.kioskView);
 
 
 

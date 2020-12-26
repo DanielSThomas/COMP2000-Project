@@ -7,12 +7,16 @@ import com.model.Item;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class KioskView extends JFrame
 {
     public Stock[] inStock;
 
     public Item[] basketList;
+
+    public LoginView loginView;
 
     public KioskUserController kioskUserController;
     private JButton btnFandP;
@@ -22,15 +26,28 @@ public class KioskView extends JFrame
     private JTable table1;
     private JButton btnRemoveItem;
     private JPanel kioskPanel;
+    private KioskView kioskView;
 
     public KioskView()
     {
-        this.setContentPane(kioskPanel);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setPreferredSize(new Dimension(500,500));
-        this.pack();
+        kioskView = this;
+        kioskUserController = new KioskUserController();
+        kioskView.setContentPane(kioskPanel);
+        kioskView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        kioskView.setPreferredSize(new Dimension(500,500));
+        kioskView.pack();
 
-        this.setVisible(true);
+
+        btnLogin.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                kioskUserController.InitialiseGui();
+                kioskUserController.ChangePage(kioskView, kioskUserController.loginView);
+                //kioskView.dispose();
+            }
+        });
     }
 
 
@@ -43,6 +60,8 @@ public class KioskView extends JFrame
     {
 
     }
+
+
 
 
 
