@@ -2,6 +2,7 @@ package com.view;
 
 
 import com.controller.KioskUserController;
+import com.model.Database;
 import com.model.Stock;
 import com.model.Item;
 
@@ -26,7 +27,10 @@ public class KioskView extends JFrame
     private JTable table1;
     private JButton btnRemoveItem;
     private JPanel kioskPanel;
+    private JTextField txtTemp;
     private KioskView kioskView;
+
+
 
     public KioskView()
     {
@@ -43,9 +47,12 @@ public class KioskView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
+
+                Database.getInstance().temp = txtTemp.getText();
+
                 kioskUserController.InitialiseGui();
                 kioskUserController.ChangePage(kioskView, kioskUserController.loginView);
-                //kioskView.dispose();
+
             }
         });
     }

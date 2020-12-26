@@ -25,6 +25,8 @@ public class KioskUserController
 
     public KioskView kioskView;
 
+    public String passData;
+
     public void Scan()
     {
 
@@ -59,6 +61,7 @@ public class KioskUserController
 
         currentPage.dispose();
     }
+
 
     public void UpdateView()
     {

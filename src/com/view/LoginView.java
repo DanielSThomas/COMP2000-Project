@@ -1,6 +1,7 @@
 package com.view;
 
 import com.controller.KioskUserController;
+import com.model.Database;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,9 +13,11 @@ public class LoginView extends JFrame
     private JPanel loginPanel;
     private JTextField textField1;
     private JPasswordField passwordField1;
-    private JButton button1;
+    private JButton btnLoad;
     private JButton btnCancel;
     private LoginView loginView;
+
+
 
     public LoginView()
     {
@@ -25,13 +28,24 @@ public class LoginView extends JFrame
         loginView.setPreferredSize(new Dimension(500,500));
         loginView.pack();
 
-        btnCancel.addActionListener(new ActionListener() {
+        btnCancel.addActionListener(new ActionListener()
+        {
             @Override
             public void actionPerformed(ActionEvent e)
             {
                 kioskUserController.InitialiseGui();
                 kioskUserController.ChangePage(loginView, kioskUserController.kioskView);
-                //loginView.dispose();
+
+            }
+        });
+
+        btnLoad.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                textField1.setText(Database.getInstance().temp);
+
             }
         });
     }
