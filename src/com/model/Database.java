@@ -1,17 +1,26 @@
 package com.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Database
 {
     // static variable single_instance of type Singleton
     private static Database single_instance = null;
 
-    // private constructor restricted to this class itself
-    private Database()
+    public String temp;
+
+    public List<Stock> stock = new ArrayList<Stock>();
+
+    //Temp testing
+    public void addStock()
     {
+        Stock Apple = new Stock("Apple",20.00);
+        stock.add(Apple);
 
     }
 
-        public String temp;
+
 
 
 

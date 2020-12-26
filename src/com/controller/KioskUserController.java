@@ -43,22 +43,21 @@ public class KioskUserController
 
     }
 
+
     public void InitialiseGui()
     {
         kioskView = new KioskView();
-        //kioskView.setVisible(true);
 
         loginView = new LoginView();
-
     }
 
     public void ChangePage(JFrame currentPage, JFrame targetPage)
     {
         currentPage.setVisible(false);
 
-
         targetPage.setVisible(true);
 
+        //Might be unnecessary as the current page is always overwritten by InitialiseGui anyway.
         currentPage.dispose();
     }
 

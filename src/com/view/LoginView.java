@@ -15,13 +15,16 @@ public class LoginView extends JFrame
     private JPasswordField txtPassword;
     private JButton btnLoad;
     private JButton btnCancel;
+
     private LoginView loginView;
 
 
 
     public LoginView()
     {
+        //Adds reference to "this" page
         loginView = this;
+
         KioskUserController kioskUserController = new KioskUserController();
         loginView.setContentPane(loginPanel);
         loginView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -45,6 +48,11 @@ public class LoginView extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 txtUsername.setText(Database.getInstance().temp);
+
+                //Temp Testing Data
+                Database.getInstance().addStock();
+
+                System.out.println(Database.getInstance().stock.get(0).getAllInfo());
 
             }
         });

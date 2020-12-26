@@ -5,37 +5,62 @@ import com.model.Item;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Stock {
+public class Stock
+{
     private String name;
 
     private int itemCount;
 
-    private int price;
+    private double price;
 
     public List<Item> item = new ArrayList<Item> ();
 
-    int getItemCount()
+    public Stock (String newname, double newprice)
+    {
+        name = newname;
+        price = newprice;
+    }
+
+    public void addItem()
+    {
+
+    }
+
+    public String getAllInfo()
+    {
+        String _string = new String("Name: " + name + " In Stock: " + itemCount + " Price: £" + price );
+        return _string;
+    }
+
+    public void ItemCount()
+    {
+        itemCount = item.size();
+    }
+
+
+
+    public int getItemCount()
     {
 
         return this.itemCount;
 
     }
 
-    void setItemCount(int value)
+    public void setItemCount(int value)
     {
 
         this.itemCount = value;
 
     }
 
-    int getPrice()
+    public double getPrice()
     {
 
         return this.price;
 
     }
 
-    void setPrice(int value)
+    public void setPrice(int value)
     {
 
         this.price = value;
