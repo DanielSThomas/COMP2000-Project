@@ -10,16 +10,17 @@ public class Stock
 
     private String name;
 
-    private int numberInStock;
-
     private double price;
+
+    private int numberInStock;
 
     private ArrayList<String> barcodes;
 
-    public Stock (String newName, double newPrice, ArrayList<String> newBarcodes)
+    public Stock (String newName, double newPrice, int newNumberInStock, ArrayList<String> newBarcodes)
     {
         name = newName;
         price = newPrice;
+        numberInStock = newNumberInStock;
         barcodes = newBarcodes;
     }
 
@@ -30,7 +31,7 @@ public class Stock
 
     public String getAllInfo()
     {
-        String _string = new String("Name: " + name + " In Stock: " + numberInStock + " Price: £" + price );
+        String _string = new String( name + " £" + price + " " + numberInStock + " In stock " );
         return _string;
     }
 
