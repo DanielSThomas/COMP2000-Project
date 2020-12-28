@@ -12,6 +12,10 @@ public class Database
 
     public List<Stock> stock = new ArrayList<Stock>();
 
+    public List<Admin> admins = new ArrayList<Admin>();
+
+
+
     //Temp testing
     public void addStock()
     {
