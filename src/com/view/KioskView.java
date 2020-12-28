@@ -35,6 +35,8 @@ public class KioskView extends JFrame
     {
         kioskView = this;
         kioskUserController = new KioskUserController();
+        kioskUserController.InitialiseDataBaseController();
+        kioskUserController.databaseController.LoadStockData();
         kioskView.setContentPane(kioskPanel);
         kioskView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         kioskView.setPreferredSize(new Dimension(500,500));
@@ -47,7 +49,7 @@ public class KioskView extends JFrame
             public void actionPerformed(ActionEvent e)
             {
 
-                Database.getInstance().temp = txtTemp.getText();
+
 
                 kioskUserController.InitialiseGui();
                 kioskUserController.ChangePage(kioskView, kioskUserController.loginView);

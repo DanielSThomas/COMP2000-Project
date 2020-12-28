@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Stock
 {
+
     private String name;
 
     private int numberInStock;
@@ -39,7 +40,9 @@ public class Stock
     }
 
 
-    public int getItemCount()
+
+
+    public int getNumberInStock()
     {
 
         return this.numberInStock;

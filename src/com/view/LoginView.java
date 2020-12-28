@@ -47,7 +47,7 @@ public class LoginView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                txtUsername.setText(Database.getInstance().temp);
+
 
 
 

@@ -11,7 +11,7 @@ import javax.swing.*;
 public class KioskUserController
 
 {
-    public Item[] basket;
+
 
     public DatabaseController databaseController;
 
@@ -39,6 +39,11 @@ public class KioskUserController
     {
 
 
+    }
+
+    public void InitialiseDataBaseController()
+    {
+        databaseController = new DatabaseController();
     }
 
 
