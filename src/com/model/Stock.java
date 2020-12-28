@@ -1,6 +1,6 @@
 package com.model;
 
-import com.model.Item;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,47 +9,47 @@ public class Stock
 {
     private String name;
 
-    private int itemCount;
+    private int numberInStock;
 
     private double price;
 
-    private List<Item> items = new ArrayList<Item> ();
+    private ArrayList<String> barcodes;
 
-    public Stock (String newName, double newPrice, List<Item> newItems)
+    public Stock (String newName, double newPrice, ArrayList<String> newBarcodes)
     {
         name = newName;
         price = newPrice;
-        items = newItems;
+        barcodes = newBarcodes;
     }
 
-    public void addItem(Item value)
+    public void addBarcode(String value)
     {
-        items.add(value);
+        barcodes.add(value);
     }
 
     public String getAllInfo()
     {
-        String _string = new String("Name: " + name + " In Stock: " + itemCount + " Price: £" + price );
+        String _string = new String("Name: " + name + " In Stock: " + numberInStock + " Price: £" + price );
         return _string;
     }
 
     public void updateItemCount()
     {
-        itemCount = items.size();
+        numberInStock = barcodes.size();
     }
 
 
     public int getItemCount()
     {
 
-        return this.itemCount;
+        return this.numberInStock;
 
     }
 
     public void setItemCount(int value)
     {
 
-        this.itemCount = value;
+        this.numberInStock = value;
 
     }
 

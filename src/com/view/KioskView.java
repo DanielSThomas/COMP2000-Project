@@ -4,7 +4,6 @@ package com.view;
 import com.controller.KioskUserController;
 import com.model.Database;
 import com.model.Stock;
-import com.model.Item;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +14,7 @@ public class KioskView extends JFrame
 {
     public Stock[] inStock;
 
-    public Item[] basketList;
+
 
     public LoginView loginView;
 

@@ -49,10 +49,7 @@ public class LoginView extends JFrame
             {
                 txtUsername.setText(Database.getInstance().temp);
 
-                //Temp Testing Data
-                Database.getInstance().addStock();
 
-                System.out.println(Database.getInstance().stock.get(0).getAllInfo());
 
             }
         });
