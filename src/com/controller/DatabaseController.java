@@ -5,7 +5,8 @@ import com.model.Admin;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DatabaseController {
+public class DatabaseController
+{
     public List<com.model.Stock> stock = new ArrayList<com.model.Stock> ();
 
     public Admin admin;

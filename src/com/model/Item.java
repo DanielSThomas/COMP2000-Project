@@ -3,5 +3,5 @@ package com.model;
 
 public class Item
 {
-    public String barcode;
+    private String barcode;
 }

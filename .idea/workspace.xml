@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="edb24861-5e49-4afe-b6a3-fe48bf2d32e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/controller/KioskUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/KioskUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/DatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Receipt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/LoginView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

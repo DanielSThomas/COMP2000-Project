@@ -13,7 +13,7 @@ public class Stock
 
     private double price;
 
-    public List<Item> item = new ArrayList<Item> ();
+    private List<Item> item = new ArrayList<Item> ();
 
     public Stock (String newname, double newprice)
     {
@@ -36,7 +36,6 @@ public class Stock
     {
         itemCount = item.size();
     }
-
 
 
     public int getItemCount()
