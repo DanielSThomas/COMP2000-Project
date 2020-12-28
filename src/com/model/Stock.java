@@ -13,17 +13,18 @@ public class Stock
 
     private double price;
 
-    private List<Item> item = new ArrayList<Item> ();
+    private List<Item> items = new ArrayList<Item> ();
 
-    public Stock (String newname, double newprice)
+    public Stock (String newName, double newPrice, List<Item> newItems)
     {
-        name = newname;
-        price = newprice;
+        name = newName;
+        price = newPrice;
+        items = newItems;
     }
 
-    public void addItem()
+    public void addItem(Item value)
     {
-
+        items.add(value);
     }
 
     public String getAllInfo()
@@ -32,9 +33,9 @@ public class Stock
         return _string;
     }
 
-    public void ItemCount()
+    public void updateItemCount()
     {
-        itemCount = item.size();
+        itemCount = items.size();
     }
 
 

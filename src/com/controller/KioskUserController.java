@@ -15,7 +15,7 @@ public class KioskUserController
 {
     public Item[] basket;
 
-    public Stock stockController;
+    public DatabaseController databaseController;
 
     public Payment payment;
 

@@ -5,6 +5,13 @@ import com.model.Admin;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 public class DatabaseController
 {
 
@@ -21,9 +28,7 @@ public class DatabaseController
 
     public void UpdateView()
     {
-//begin of modifiable zone(JavaCode)......C/98c80590-874c-4ad0-9f39-294aba76d68c
 
-//end of modifiable zone(JavaCode)........E/98c80590-874c-4ad0-9f39-294aba76d68c
     }
 
 }

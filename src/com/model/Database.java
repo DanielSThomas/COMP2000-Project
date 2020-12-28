@@ -16,13 +16,7 @@ public class Database
 
 
 
-    //Temp testing
-    public void addStock()
-    {
-        Stock Apple = new Stock("Apple",20.00);
-        stock.add(Apple);
 
-    }
 
 
 
