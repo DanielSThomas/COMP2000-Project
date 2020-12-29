@@ -20,7 +20,7 @@ public class AdminView extends JFrame
     private JButton btnDeleteStock;
     private JButton button2;
     private JButton BtnOrderStock;
-    private JButton button4;
+    private JButton btnRefresh;
     private JButton btnDeleteStockType;
     private JButton btnEditStockType;
     private JButton btnCreateStockType;
@@ -49,12 +49,7 @@ public class AdminView extends JFrame
         defaultListModel = new DefaultListModel<String>();
         defaultListModel2 = new DefaultListModel<String>();
 
-        for (int i = 0; i < Database.getInstance().stockType.size(); i++)
-        {
-            defaultListModel.add(i,Database.getInstance().stockType.get(i).getAllInfo());
-        }
-
-        lstStockTypes.setModel(defaultListModel);
+        databaseController.viewStockType(defaultListModel,lstStockTypes);
 
 
 
@@ -86,6 +81,41 @@ public class AdminView extends JFrame
             {
                 selectedIndex = lstStockTypes.getSelectedIndex();
                 databaseController.viewStock(selectedIndex,lstStock,defaultListModel2);
+            }
+        });
+
+        BtnOrderStock.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                try
+                {
+                databaseController.orderStock(selectedIndex);
+                databaseController.SaveStockData();
+
+
+
+                databaseController.viewStock(selectedIndex,lstStock,defaultListModel2);
+
+                //databaseController.viewStockType(defaultListModel,lstStockTypes);// Needs threading or something, causes crash if viewstock runs at same time
+                }
+                catch (Exception e1)
+                {
+                    System.out.println(e1);
+                }
+
+            }
+        });
+
+        btnRefresh.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                adminView.dispose();
+                guiController.InitialiseGui();
+                guiController.ChangePage(guiController.loginView, guiController.adminView); //This is bad :(
             }
         });
     }

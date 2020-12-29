@@ -87,6 +87,19 @@ public class DatabaseController
 
     }
 
+    public void viewStockType(DefaultListModel<String> defaultListModel, JList jList)
+    {
+        defaultListModel.clear();
+        for (int i = 0; i < Database.getInstance().stockType.size(); i++)
+        {
+            defaultListModel.add(i,Database.getInstance().stockType.get(i).getAllInfo());
+        }
+
+        jList.setModel(defaultListModel);
+    }
+
+
+
     public void createStockType(String name, String price)
     {
         Integer numberInStock = 0;
@@ -106,14 +119,41 @@ public class DatabaseController
 
     }
 
+    public void orderStock(Integer index)
+    {
+        String frontBarcode;
+        String backBarcode;
+        String barcode;
+
+        frontBarcode = Database.getInstance().stockType.get(index).getName().substring(0,2);
+        backBarcode = String.valueOf(System.currentTimeMillis());
+        barcode = frontBarcode + backBarcode;
+
+        //Method to order stock
+
+        //Confirm stock arrived
+
+        Database.getInstance().stockType.get(index).addBarcode(barcode);
+        Database.getInstance().stockType.get(index).updateItemCount();
+
+
+
+
+
+
+    }
+
     public void viewStock(Integer index,JList<String> jList, DefaultListModel<String> defaultListModel)
     {
+
         defaultListModel.clear();
+
 
         for (int i = 0; i < Database.getInstance().stockType.get(index).getBarcodes().size(); i++)
         {
             defaultListModel.add(i,Database.getInstance().stockType.get(index).getBarcodes().get(i));
         }
+
 
         jList.setModel(defaultListModel);
 
