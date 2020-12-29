@@ -31,7 +31,7 @@ public class StockType
 
     public String getAllInfo()
     {
-        String _string = new String( name + " £" + price + " " + numberInStock + " In stock " );
+        String _string = new String( name + " £" + price + " < " + numberInStock + " In stock >" );
         return _string;
     }
 

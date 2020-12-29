@@ -3,6 +3,7 @@ package com.view;
 
 import com.controller.DatabaseController;
 import com.controller.GUIController;
+import com.model.Database;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,17 +27,29 @@ public class AdminView extends JFrame
     private JButton logoutButton;
     private JPanel adminPanel;
     private AdminView adminView;
+    private DefaultListModel<String> defaultListModel;
 
     public AdminView()
     {
         adminView = this;
 
-        //KioskUserController kioskUserController = new KioskUserController();
+
+        DatabaseController databaseController = new DatabaseController();
         GUIController guiController = new GUIController();
         adminView.setContentPane(adminPanel);
         adminView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         adminView.setPreferredSize(new Dimension(500,500));
         adminView.pack();
+        databaseController.LoadStockData();
+
+        defaultListModel = new DefaultListModel<String>();
+
+        for (int i = 0; i < Database.getInstance().stockType.size(); i++)
+        {
+            defaultListModel.add(i,Database.getInstance().stockType.get(i).getAllInfo());
+        }
+
+        lstStockTypes.setModel(defaultListModel);
 
 
         logoutButton.addActionListener(new ActionListener()

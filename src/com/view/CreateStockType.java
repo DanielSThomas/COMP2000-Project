@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class CreateStockType {
     private JPanel panel1;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField txtStockTypeName;
+    private JTextField txtStockTypePrice;
     private JButton btnApply;
     private JButton btnCancel;
 }
