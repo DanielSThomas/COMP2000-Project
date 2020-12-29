@@ -2,6 +2,7 @@ package com.controller;
 
 import com.model.Database;
 import com.model.StockType;
+import com.sun.source.tree.CatchTree;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class DatabaseController
                 name = br.readLine();
 
             }
+            br.close();
 
 
         }
@@ -50,6 +52,41 @@ public class DatabaseController
 
     public void SaveStockData()
     {
+        
+
+       try
+        {
+            File stockData = new File("src/data/StockData.txt");
+            PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(stockData)));
+            //BufferedWriter bw = new BufferedWriter(new FileWriter(stockData));
+
+            for (StockType stocktype: Database.getInstance().stockType)
+            {
+                
+                pw.println(stocktype.getName());
+
+                pw.println(String.valueOf(stocktype.getPrice()));
+
+                pw.println(String.valueOf(stocktype.getNumberInStock()));
+
+                for (int i = 0; i < stocktype.getNumberInStock(); i++)
+                {
+                    pw.println(stocktype.getBarcodes().get(i));
+                }
+            }
+            pw.close();
+
+
+
+
+
+        }
+         catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+
 
     }
 
@@ -69,7 +106,7 @@ public class DatabaseController
 
     public void deleteStockType()
     {
-        
+
     }
 
 

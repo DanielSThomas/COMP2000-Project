@@ -40,8 +40,15 @@ public class StockType
         numberInStock = barcodes.size();
     }
 
+    public ArrayList<String> getBarcodes()
+    {
+        return barcodes;
+    }
 
-
+    public String getName()
+    {
+        return name;
+    }
 
     public int getNumberInStock()
     {

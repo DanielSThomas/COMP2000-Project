@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edb24861-5e49-4afe-b6a3-fe48bf2d32e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/controller/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/DatabaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/model/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/StockType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/StockType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/StockType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/view/KioskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/KioskView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/StockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/StockData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,16 +102,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/controller/DatabaseController.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -9,14 +9,9 @@ public class Database
     private static Database single_instance = null;
 
 
-
     public List<StockType> stockType = new ArrayList<StockType>();
 
     public List<Admin> admins = new ArrayList<Admin>();
-
-
-
-
 
 
 

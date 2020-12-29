@@ -39,6 +39,7 @@ public class KioskView extends JFrame
         kioskUserController = new KioskUserController();
         kioskUserController.InitialiseDataBaseController();
         kioskUserController.databaseController.LoadStockData();
+
         defaultListModel = new DefaultListModel<String>();
 
         for (int i = 0; i < Database.getInstance().stockType.size(); i++)
@@ -52,6 +53,8 @@ public class KioskView extends JFrame
         kioskView.setContentPane(kioskPanel);
         kioskView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         kioskView.setPreferredSize(new Dimension(500,500));
+
+
 
 
 
@@ -73,6 +76,15 @@ public class KioskView extends JFrame
                 guiController.InitialiseGui();
                 guiController.ChangePage(kioskView, guiController.loginView);
 
+            }
+        });
+
+        btnRemoveItem.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                kioskUserController.databaseController.SaveStockData();
             }
         });
     }
