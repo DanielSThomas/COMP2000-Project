@@ -1,6 +1,6 @@
 package com.view;
 
-import com.controller.KioskUserController;
+import com.controller.GUIController;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +24,8 @@ public class LoginView extends JFrame
         //Adds reference to "this" page
         loginView = this;
 
-        KioskUserController kioskUserController = new KioskUserController();
+        //KioskUserController kioskUserController = new KioskUserController();
+        GUIController guiController = new GUIController();
         loginView.setContentPane(loginPanel);
         loginView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         loginView.setPreferredSize(new Dimension(500,500));
@@ -35,8 +36,8 @@ public class LoginView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                kioskUserController.InitialiseGui();
-                kioskUserController.ChangePage(loginView, kioskUserController.kioskView);
+                guiController.InitialiseGui();
+                guiController.ChangePage(loginView, guiController.kioskView);
 
             }
         });

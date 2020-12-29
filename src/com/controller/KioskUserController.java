@@ -19,9 +19,7 @@ public class KioskUserController
 
     public Receipt receipt;
 
-    public LoginView loginView;
 
-    public KioskView kioskView;
 
 
 
@@ -47,22 +45,7 @@ public class KioskUserController
     }
 
 
-    public void InitialiseGui()
-    {
-        kioskView = new KioskView();
 
-        loginView = new LoginView();
-    }
-
-    public void ChangePage(JFrame currentPage, JFrame targetPage)
-    {
-        currentPage.setVisible(false);
-
-        targetPage.setVisible(true);
-
-        //Might be unnecessary as the current page is always overwritten by InitialiseGui anyway.
-        currentPage.dispose();
-    }
 
 
     public void UpdateView()

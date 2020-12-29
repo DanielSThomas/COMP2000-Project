@@ -1,10 +1,7 @@
 package com;
 
-import com.controller.KioskUserController;
+import com.controller.GUIController;
 import com.model.Database;
-import com.view.KioskView;
-
-import javax.swing.*;
 
 public class Main
 {
@@ -15,9 +12,9 @@ public class Main
     {
         Database database = Database.getInstance();
 
-        KioskUserController kioskUserController = new KioskUserController();
-        kioskUserController.InitialiseGui();
-        kioskUserController.ChangePage(kioskUserController.loginView, kioskUserController.kioskView);
+        GUIController guiController = new GUIController();
+        guiController.InitialiseGui();
+        guiController.ChangePage(guiController.loginView, guiController.kioskView);
 
     }
 

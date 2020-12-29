@@ -1,13 +1,12 @@
 package com.view;
 
 
+import com.controller.GUIController;
 import com.controller.KioskUserController;
 import com.model.Database;
 import com.model.Stock;
 
 import javax.swing.*;
-import javax.swing.table.TableColumn;
-import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,6 +35,7 @@ public class KioskView extends JFrame
     public KioskView()
     {
         kioskView = this;
+        GUIController guiController = new GUIController();
         kioskUserController = new KioskUserController();
         kioskUserController.InitialiseDataBaseController();
         kioskUserController.databaseController.LoadStockData();
@@ -70,8 +70,8 @@ public class KioskView extends JFrame
 
 
 
-                kioskUserController.InitialiseGui();
-                kioskUserController.ChangePage(kioskView, kioskUserController.loginView);
+                guiController.InitialiseGui();
+                guiController.ChangePage(kioskView, guiController.loginView);
 
             }
         });
