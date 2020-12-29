@@ -1,7 +1,6 @@
 package com.view;
 
 import com.controller.KioskUserController;
-import com.model.Database;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +12,7 @@ public class LoginView extends JFrame
     private JPanel loginPanel;
     private JTextField txtUsername;
     private JPasswordField txtPassword;
-    private JButton btnLoad;
+    private JButton btnLogin;
     private JButton btnCancel;
 
     private LoginView loginView;
@@ -42,13 +41,11 @@ public class LoginView extends JFrame
             }
         });
 
-        btnLoad.addActionListener(new ActionListener()
+        btnLogin.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-
-
 
 
             }

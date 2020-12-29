@@ -17,9 +17,7 @@ public class DatabaseController
         {
             Database.getInstance().stock.clear();
 
-
             File stockData = new File("src/data/StockData.txt");
-
 
             BufferedReader br = new BufferedReader(new FileReader(stockData));
 
@@ -35,8 +33,6 @@ public class DatabaseController
                 }
 
                 Stock tempStock = new Stock(name,Double.parseDouble(price),numberInStock,barcodes);
-
-
 
                 Database.getInstance().stock.add(tempStock);
 

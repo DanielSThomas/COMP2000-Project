@@ -23,7 +23,7 @@ public class KioskUserController
 
     public KioskView kioskView;
 
-    public String passData;
+
 
     public void Scan()
     {
