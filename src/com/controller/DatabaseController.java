@@ -1,12 +1,10 @@
 package com.controller;
 
-import com.model.Admin;
 import com.model.Database;
-import com.model.Stock;
+import com.model.StockType;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 
 public class DatabaseController
 {
@@ -15,7 +13,7 @@ public class DatabaseController
     {
         try
         {
-            Database.getInstance().stock.clear();
+            Database.getInstance().stockType.clear();
 
             File stockData = new File("src/data/StockData.txt");
 
@@ -32,9 +30,9 @@ public class DatabaseController
                     barcodes.add(br.readLine());
                 }
 
-                Stock tempStock = new Stock(name,Double.parseDouble(price),numberInStock,barcodes);
+                StockType tempStockType = new StockType(name,Double.parseDouble(price),numberInStock,barcodes);
 
-                Database.getInstance().stock.add(tempStock);
+                Database.getInstance().stockType.add(tempStockType);
 
                 name = br.readLine();
 
@@ -50,17 +48,30 @@ public class DatabaseController
 
     }
 
-
-
-
-    public void CrudOperations(com.model.Stock stock)
+    public void SaveStockData()
     {
 
     }
 
-    public void UpdateView()
+    public void createStockType(String name, String price)
+    {
+        Integer numberInStock = 0;
+        ArrayList<String> barcodes = new ArrayList<String>();
+
+        StockType tempStockType = new StockType(name,Double.parseDouble(price),numberInStock,barcodes);
+        Database.getInstance().stockType.add(tempStockType);
+    }
+
+    public void editStockType()
     {
 
     }
+
+    public void deleteStockType()
+    {
+        
+    }
+
+
 
 }

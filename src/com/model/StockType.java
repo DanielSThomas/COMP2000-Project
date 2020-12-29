@@ -5,7 +5,7 @@ package com.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Stock
+public class StockType
 {
 
     private String name;
@@ -16,7 +16,7 @@ public class Stock
 
     private ArrayList<String> barcodes;
 
-    public Stock (String newName, double newPrice, int newNumberInStock, ArrayList<String> newBarcodes)
+    public StockType(String newName, double newPrice, int newNumberInStock, ArrayList<String> newBarcodes)
     {
         name = newName;
         price = newPrice;

@@ -4,7 +4,7 @@ package com.view;
 import com.controller.GUIController;
 import com.controller.KioskUserController;
 import com.model.Database;
-import com.model.Stock;
+import com.model.StockType;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 
 public class KioskView extends JFrame
 {
-    public Stock[] inStock;
+    public StockType[] inStockType;
 
 
 
@@ -41,9 +41,9 @@ public class KioskView extends JFrame
         kioskUserController.databaseController.LoadStockData();
         defaultListModel = new DefaultListModel<String>();
 
-        for (int i = 0; i < Database.getInstance().stock.size(); i++)
+        for (int i = 0; i < Database.getInstance().stockType.size(); i++)
         {
-            defaultListModel.add(i,Database.getInstance().stock.get(i).getAllInfo());
+            defaultListModel.add(i,Database.getInstance().stockType.get(i).getAllInfo());
         }
 
 

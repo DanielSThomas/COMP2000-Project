@@ -10,7 +10,7 @@ public class Database
 
 
 
-    public List<Stock> stock = new ArrayList<Stock>();
+    public List<StockType> stockType = new ArrayList<StockType>();
 
     public List<Admin> admins = new ArrayList<Admin>();
 
