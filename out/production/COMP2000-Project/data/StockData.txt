@@ -10,3 +10,9 @@ Bannana
 2
 BA1111
 BA1112
+Bread
+6.99
+0
+DairyMilk Chocolate Bar
+1.99
+0

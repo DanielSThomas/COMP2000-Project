@@ -4,6 +4,7 @@ import com.model.Database;
 import com.model.StockType;
 import com.sun.source.tree.CatchTree;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -76,10 +77,6 @@ public class DatabaseController
             }
             pw.close();
 
-
-
-
-
         }
          catch (IOException e)
         {
@@ -106,6 +103,21 @@ public class DatabaseController
 
     public void deleteStockType()
     {
+
+    }
+
+    public void viewStock(Integer index,JList<String> jList, DefaultListModel<String> defaultListModel)
+    {
+        defaultListModel.clear();
+
+        for (int i = 0; i < Database.getInstance().stockType.get(index).getBarcodes().size(); i++)
+        {
+            defaultListModel.add(i,Database.getInstance().stockType.get(index).getBarcodes().get(i));
+        }
+
+        jList.setModel(defaultListModel);
+
+
 
     }
 

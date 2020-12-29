@@ -6,9 +6,10 @@ import com.controller.GUIController;
 import com.model.Database;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class AdminView extends JFrame
 {
@@ -28,6 +29,9 @@ public class AdminView extends JFrame
     private JPanel adminPanel;
     private AdminView adminView;
     private DefaultListModel<String> defaultListModel;
+    private DefaultListModel<String> defaultListModel2;
+    private Integer selectedIndex;
+    private Integer selectedIndex2;
 
     public AdminView()
     {
@@ -43,6 +47,7 @@ public class AdminView extends JFrame
         databaseController.LoadStockData();
 
         defaultListModel = new DefaultListModel<String>();
+        defaultListModel2 = new DefaultListModel<String>();
 
         for (int i = 0; i < Database.getInstance().stockType.size(); i++)
         {
@@ -50,6 +55,8 @@ public class AdminView extends JFrame
         }
 
         lstStockTypes.setModel(defaultListModel);
+
+
 
 
         logoutButton.addActionListener(new ActionListener()
@@ -71,6 +78,19 @@ public class AdminView extends JFrame
                 guiController.ChangePage(adminView, guiController.createStockType);
             }
         });
+
+
+        lstStockTypes.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e)
+            {
+                selectedIndex = lstStockTypes.getSelectedIndex();
+                databaseController.viewStock(selectedIndex,lstStock,defaultListModel2);
+            }
+        });
     }
+
+
+
 
 }
