@@ -62,7 +62,7 @@ public class DatabaseController
 
             for (StockType stocktype: Database.getInstance().stockType)
             {
-                
+
                 pw.println(stocktype.getName());
 
                 pw.println(String.valueOf(stocktype.getPrice()));
