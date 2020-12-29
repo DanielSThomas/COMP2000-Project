@@ -47,6 +47,11 @@ public class LoginView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
+                if (txtUsername.getText().equals("admin")) //Placeholder login
+                {
+                    guiController.InitialiseGui();
+                    guiController.ChangePage(loginView, guiController.adminView);
+                }
 
 
             }
