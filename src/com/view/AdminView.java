@@ -61,6 +61,16 @@ public class AdminView extends JFrame
                 guiController.ChangePage(adminView, guiController.kioskView);
             }
         });
+
+        btnCreateStockType.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                guiController.InitialiseGui();
+                guiController.ChangePage(adminView, guiController.createStockType);
+            }
+        });
     }
 
 }

@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.view.AdminView;
+import com.view.CreateStockType;
 import com.view.KioskView;
 import com.view.LoginView;
 
@@ -14,16 +15,21 @@ public class GUIController
 
     public AdminView adminView;
 
+    public CreateStockType createStockType;
+
 
 
 
     public void InitialiseGui()
     {
+        //Create Case Statements ?
         kioskView = new KioskView();
 
         loginView = new LoginView();
 
         adminView = new AdminView();
+
+        createStockType = new CreateStockType();
 
     }
 
