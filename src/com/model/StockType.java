@@ -29,6 +29,7 @@ public class StockType
         barcodes.add(value);
     }
 
+
     public String getAllInfo()
     {
         String _string = new String( name + " £" + price + " < " + numberInStock + " In stock >" );

@@ -4,8 +4,9 @@
     <list default="true" id="edb24861-5e49-4afe-b6a3-fe48bf2d32e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/controller/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/AdminView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/AdminView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/StockType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/StockType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/view/AdminView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/AdminView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Backup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Backup.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/StockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/StockData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,9 +107,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/controller/DatabaseController.java</url>
-          <line>153</line>
-          <option name="timeStamp" value="30" />
+          <url>file://$PROJECT_DIR$/src/com/view/AdminView.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

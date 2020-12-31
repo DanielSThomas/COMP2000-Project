@@ -114,9 +114,9 @@ public class DatabaseController
 
     }
 
-    public void deleteStockType()
+    public void deleteStockType(Integer index)
     {
-
+        Database.getInstance().stockType.remove(index.intValue());
     }
 
     public void orderStock(Integer index, Integer orderCount)
@@ -141,12 +141,12 @@ public class DatabaseController
         }
 
 
+    }
 
-
-
-
-
-
+    public void deleteStock(Integer parentIndex, Integer childIndex)
+    {
+        Database.getInstance().stockType.get(parentIndex).getBarcodes().remove(childIndex.intValue());
+        Database.getInstance().stockType.get(parentIndex).updateItemCount();
     }
 
     public void viewStock(Integer index,JList<String> jList, DefaultListModel<String> defaultListModel)
@@ -162,8 +162,6 @@ public class DatabaseController
 
 
         jList.setModel(defaultListModel);
-
-
 
     }
 

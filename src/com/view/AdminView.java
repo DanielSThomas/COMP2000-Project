@@ -90,10 +90,10 @@ public class AdminView extends JFrame
             {
                 try
                 {
-                    Number number = (Number) spnOrderStock.getValue();
+                    Number objectToInt = (Number) spnOrderStock.getValue();
 
 
-                databaseController.orderStock(selectedIndex, number.intValue());
+                databaseController.orderStock(selectedIndex, objectToInt.intValue());
                 databaseController.SaveStockData();
 
 
@@ -118,6 +118,44 @@ public class AdminView extends JFrame
                 adminView.dispose();
                 guiController.InitialiseGui();
                 guiController.ChangePage(guiController.loginView, guiController.adminView); //This is bad :(
+            }
+        });
+
+        btnDeleteStockType.addActionListener(new ActionListener()
+        {
+
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                selectedIndex = lstStockTypes.getSelectedIndex();
+                databaseController.deleteStockType(selectedIndex);
+                databaseController.SaveStockData();
+
+                adminView.dispose();
+                guiController.InitialiseGui();
+                guiController.ChangePage(guiController.loginView, guiController.adminView); //This is bad :(
+                
+            }
+        });
+
+
+        btnDeleteStock.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                try
+                {
+                    selectedIndex2 = lstStock.getSelectedIndex();
+                    databaseController.deleteStock(selectedIndex, selectedIndex2);
+                    databaseController.SaveStockData();
+                    databaseController.viewStock(selectedIndex,lstStock,defaultListModel2);
+                }
+                catch (Exception e2)
+                {
+
+                }
+
             }
         });
     }
