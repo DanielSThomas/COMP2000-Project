@@ -94,13 +94,14 @@ public class AdminView extends JFrame
                 {
                     Number objectToInt = (Number) spnOrderStock.getValue();
 
-
                 databaseController.orderStock(selectedIndex, objectToInt.intValue());
                 databaseController.SaveStockData();
 
 
 
                 databaseController.viewStock(selectedIndex,lstStock,defaultListModel2);
+
+                btnRefresh.setBackground(Color.green);
 
                 //databaseController.viewStockType(defaultListModel,lstStockTypes);// Needs threading or something, causes crash if viewstock runs at same time
                 }
@@ -117,7 +118,7 @@ public class AdminView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                adminView.dispose();
+                //adminView.dispose();
                 guiController.InitialiseGui();
                 guiController.ChangePage(adminView, guiController.adminView);
             }
@@ -133,7 +134,7 @@ public class AdminView extends JFrame
                 databaseController.deleteStockType(selectedIndex);
                 databaseController.SaveStockData();
 
-                adminView.dispose();
+                //adminView.dispose();
                 guiController.InitialiseGui();
                 guiController.ChangePage(adminView, guiController.adminView);
 
@@ -152,6 +153,7 @@ public class AdminView extends JFrame
                     databaseController.deleteStock(selectedIndex, selectedIndex2);
                     databaseController.SaveStockData();
                     databaseController.viewStock(selectedIndex,lstStock,defaultListModel2);
+                    btnRefresh.setBackground(Color.green);
                 }
                 catch (Exception e2)
                 {

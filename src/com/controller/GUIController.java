@@ -35,6 +35,8 @@ public class GUIController
 
     public void ChangePage(JFrame currentPage, JFrame targetPage)
     {
+        InitialiseGui();
+
         currentPage.setVisible(false);
 
         targetPage.setLocation(currentPage.getLocation());
@@ -42,7 +44,6 @@ public class GUIController
         targetPage.setSize(currentPage.getSize());
 
         targetPage.setVisible(true);
-
 
         //Might be unnecessary as the current page is always overwritten by InitialiseGui anyway.
         currentPage.dispose();
