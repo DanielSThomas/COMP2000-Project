@@ -104,7 +104,9 @@ public class AdminView extends JFrame
 
                 btnRefresh.setBackground(Color.green);
 
-                //databaseController.viewStockType(defaultListModel,lstStockTypes);// Needs threading or something, causes crash if viewstock runs at same time
+
+
+                // databaseController.viewStockType(defaultListModel,lstStockTypes);// Needs threading or something, causes crash if viewstock runs at same time
                 }
                 catch (Exception e1)
                 {

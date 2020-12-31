@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.nio.channels.ScatteringByteChannel;
 
 public class KioskView extends JFrame
 {
@@ -47,14 +48,16 @@ public class KioskView extends JFrame
         defaultListModel = new DefaultListModel<String>();
         defaultListModel2 = new DefaultListModel<String>();
 
-        for (int i = 0; i < Database.getInstance().stockType.size(); i++)
-        {
-            defaultListModel.add(i,Database.getInstance().stockType.get(i).getAllInfo());
-        }
+        kioskUserController.ViewStockType(defaultListModel, lstStock);
 
-
-
-        lstStock.setModel(defaultListModel);
+//        for (int i = 0; i < Database.getInstance().stockType.size(); i++)
+//        {
+//            defaultListModel.add(i,Database.getInstance().stockType.get(i).getAllInfo());
+//        }
+//
+//
+//
+//        lstStock.setModel(defaultListModel);
         kioskView.setContentPane(kioskPanel);
         kioskView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         kioskView.setPreferredSize(new Dimension(500,500));
@@ -99,10 +102,19 @@ public class KioskView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                selectedIndex = lstStock.getSelectedIndex();
-                kioskUserController.AddToBasket(selectedIndex);
+                try
+                {
+                    selectedIndex = lstStock.getSelectedIndex();
+                    kioskUserController.AddToBasket(selectedIndex);
 
-                kioskUserController.ViewBasket(defaultListModel2,lstBasket);
+                    kioskUserController.ViewBasket(defaultListModel2,lstBasket);
+                    kioskUserController.ViewStockType(defaultListModel, lstStock);
+                }
+
+                catch(Exception e1)
+                {
+
+                }
             }
         });
     }

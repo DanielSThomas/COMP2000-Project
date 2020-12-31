@@ -23,7 +23,25 @@ public class KioskUserController
     {
         Database.getInstance().basket.add(Database.getInstance().stockType.get(index));
 
+        Database.getInstance().stockType.get(index).getBarcodes().remove(0);
 
+        Database.getInstance().stockType.get(index).updateItemCount();
+
+        databaseController.SaveStockData();
+
+
+
+    }
+
+    public void ViewStockType(DefaultListModel<String> defaultListModel, JList jList)
+    {
+        defaultListModel.clear();
+        for (int i = 0; i < Database.getInstance().stockType.size(); i++)
+        {
+            defaultListModel.add(i,Database.getInstance().stockType.get(i).getAllInfo());
+        }
+
+        jList.setModel(defaultListModel);
     }
 
     public void ViewBasket(DefaultListModel<String> defaultListModel, JList jList)

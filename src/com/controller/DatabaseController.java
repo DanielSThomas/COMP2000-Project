@@ -120,8 +120,6 @@ public class DatabaseController
         Database.getInstance().stockType.get(index).getName();
         Database.getInstance().stockType.get(index).getPrice();
 
-
-
     }
 
     public void deleteStockType(Integer index)
