@@ -112,7 +112,7 @@ public class KioskView extends JFrame
                     kioskUserController.ViewStockType(defaultListModel, lstStock);
 
                     kioskUserController.CalculateTotalBasket();
-                    lblTotalCost.setText("Total Cost £ " + String.valueOf(Database.getInstance().basketTotal)); //round numbers
+                    lblTotalCost.setText("Total Cost £ " + String.valueOf(Database.getInstance().basketTotal)); //round number
                 }
 
                 catch(Exception e1)

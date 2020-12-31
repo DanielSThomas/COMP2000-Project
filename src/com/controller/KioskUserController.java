@@ -9,6 +9,7 @@ import com.view.LoginView;
 
 import javax.swing.*;
 import javax.xml.crypto.Data;
+import java.text.DecimalFormat;
 
 public class KioskUserController
 
@@ -36,15 +37,20 @@ public class KioskUserController
         double totalCost = 0.0;
         double singleCost = 0.0;
 
+        DecimalFormat decimalFormat = new DecimalFormat("##.00");
+
 
         for (int i = 0; i < Database.getInstance().basket.size(); i++)
         {
 
             singleCost = Database.getInstance().basket.get(i).getPrice();
-            totalCost += singleCost;
+            totalCost += Double.parseDouble(decimalFormat.format(singleCost));
 
         }
-        Database.getInstance().basketTotal = totalCost;
+
+
+
+        Database.getInstance().basketTotal = Double.parseDouble(decimalFormat.format(totalCost));
 
 
 
