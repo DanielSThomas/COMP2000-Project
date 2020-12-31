@@ -32,6 +32,7 @@ public class AdminView extends JFrame
     private Integer selectedIndex;
     private Integer selectedIndex2;
 
+
     public AdminView()
     {
         adminView = this;
@@ -41,7 +42,8 @@ public class AdminView extends JFrame
         GUIController guiController = new GUIController();
         adminView.setContentPane(adminPanel);
         adminView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        adminView.setPreferredSize(new Dimension(500,500));
+
+
         adminView.pack();
         databaseController.LoadStockData();
 
@@ -117,7 +119,7 @@ public class AdminView extends JFrame
             {
                 adminView.dispose();
                 guiController.InitialiseGui();
-                guiController.ChangePage(guiController.loginView, guiController.adminView); //This is bad :(
+                guiController.ChangePage(adminView, guiController.adminView);
             }
         });
 
@@ -133,8 +135,8 @@ public class AdminView extends JFrame
 
                 adminView.dispose();
                 guiController.InitialiseGui();
-                guiController.ChangePage(guiController.loginView, guiController.adminView); //This is bad :(
-                
+                guiController.ChangePage(adminView, guiController.adminView);
+
             }
         });
 

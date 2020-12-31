@@ -27,7 +27,7 @@ public class CreateStockTypeView extends JFrame
 
         createStockTypeView.setContentPane(createStockTypePanel);
         createStockTypeView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        createStockTypeView.setPreferredSize(new Dimension(500,500));
+        
         createStockTypeView.pack();
 
 
