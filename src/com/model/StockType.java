@@ -36,6 +36,12 @@ public class StockType
         return _string;
     }
 
+    public String getBasketInfo()
+    {
+        String _string = new String(name + " £" + price);
+        return _string;
+    }
+
     public void updateItemCount()
     {
         numberInStock = barcodes.size();

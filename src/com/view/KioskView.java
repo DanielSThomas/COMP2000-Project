@@ -29,6 +29,9 @@ public class KioskView extends JFrame
     private JList lstBasket;
     private KioskView kioskView;
     private DefaultListModel<String> defaultListModel;
+    private DefaultListModel<String> defaultListModel2;
+    private Integer selectedIndex;
+    private Integer selectedIndex2;
 
 
     public KioskView()
@@ -39,7 +42,10 @@ public class KioskView extends JFrame
         kioskUserController.InitialiseDataBaseController();
         kioskUserController.databaseController.LoadStockData();
 
+
+
         defaultListModel = new DefaultListModel<String>();
+        defaultListModel2 = new DefaultListModel<String>();
 
         for (int i = 0; i < Database.getInstance().stockType.size(); i++)
         {
@@ -52,6 +58,7 @@ public class KioskView extends JFrame
         kioskView.setContentPane(kioskPanel);
         kioskView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         kioskView.setPreferredSize(new Dimension(500,500));
+        kioskUserController.ViewBasket(defaultListModel2,lstBasket);
 
 
 
@@ -83,21 +90,25 @@ public class KioskView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                kioskUserController.databaseController.SaveStockData();
+
+            }
+        });
+
+        btnAddItem.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                selectedIndex = lstStock.getSelectedIndex();
+                kioskUserController.AddToBasket(selectedIndex);
+
+                kioskUserController.ViewBasket(defaultListModel2,lstBasket);
             }
         });
     }
 
 
-    public void AddToBasket()
-    {
 
-    }
-
-    public void FinishAndPay()
-    {
-
-    }
 
 
 

@@ -10,6 +10,8 @@ public class Database
 
     public Integer storedInt = 0;
 
+    public List<StockType> basket = new ArrayList<StockType>();
+
     public List<StockType> stockType = new ArrayList<StockType>();
 
     public List<Admin> admins = new ArrayList<Admin>();
