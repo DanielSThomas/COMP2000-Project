@@ -8,6 +8,7 @@ import com.view.KioskView;
 import com.view.LoginView;
 
 import javax.swing.*;
+import javax.xml.crypto.Data;
 
 public class KioskUserController
 
@@ -28,6 +29,23 @@ public class KioskUserController
         Database.getInstance().stockType.get(index).updateItemCount();
 
         databaseController.SaveStockData();
+    }
+
+    public void CalculateTotalBasket()
+    {
+        double totalCost = 0.0;
+        double singleCost = 0.0;
+
+
+        for (int i = 0; i < Database.getInstance().basket.size(); i++)
+        {
+
+            singleCost = Database.getInstance().basket.get(i).getPrice();
+            totalCost += singleCost;
+
+        }
+        Database.getInstance().basketTotal = totalCost;
+
 
 
 

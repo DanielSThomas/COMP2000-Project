@@ -12,6 +12,8 @@ public class Database
 
     public List<StockType> basket = new ArrayList<StockType>();
 
+    public Double basketTotal = 0.0;
+
     public List<StockType> stockType = new ArrayList<StockType>();
 
     public List<Admin> admins = new ArrayList<Admin>();

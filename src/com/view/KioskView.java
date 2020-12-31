@@ -28,6 +28,7 @@ public class KioskView extends JFrame
     private JPanel kioskPanel;
     private JList lstStock;
     private JList lstBasket;
+    private JLabel lblTotalCost;
     private KioskView kioskView;
     private DefaultListModel<String> defaultListModel;
     private DefaultListModel<String> defaultListModel2;
@@ -109,6 +110,9 @@ public class KioskView extends JFrame
 
                     kioskUserController.ViewBasket(defaultListModel2,lstBasket);
                     kioskUserController.ViewStockType(defaultListModel, lstStock);
+
+                    kioskUserController.CalculateTotalBasket();
+                    lblTotalCost.setText("Total Cost £ " + String.valueOf(Database.getInstance().basketTotal)); //round numbers
                 }
 
                 catch(Exception e1)
