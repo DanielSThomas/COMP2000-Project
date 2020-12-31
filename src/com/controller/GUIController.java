@@ -1,9 +1,6 @@
 package com.controller;
 
-import com.view.AdminView;
-import com.view.CreateStockTypeView;
-import com.view.KioskView;
-import com.view.LoginView;
+import com.view.*;
 
 import javax.swing.*;
 
@@ -17,12 +14,14 @@ public class GUIController
 
     public CreateStockTypeView createStockTypeView;
 
+    public EditStockTypeView editStockTypeView;
+
 
 
 
     public void InitialiseGui()
     {
-        //Create Case Statements ?
+
         kioskView = new KioskView();
 
         loginView = new LoginView();
@@ -30,6 +29,8 @@ public class GUIController
         adminView = new AdminView();
 
         createStockTypeView = new CreateStockTypeView();
+
+        editStockTypeView = new EditStockTypeView();
 
     }
 

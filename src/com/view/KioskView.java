@@ -25,7 +25,6 @@ public class KioskView extends JFrame
     private JButton btnAddItem;
     private JButton btnRemoveItem;
     private JPanel kioskPanel;
-    private JTextField txtTemp;
     private JList lstStock;
     private JList lstBasket;
     private KioskView kioskView;

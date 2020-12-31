@@ -8,6 +8,7 @@ public class Database
     // static variable single_instance of type Singleton
     private static Database single_instance = null;
 
+    public Integer storedInt = 0;
 
     public List<StockType> stockType = new ArrayList<StockType>();
 

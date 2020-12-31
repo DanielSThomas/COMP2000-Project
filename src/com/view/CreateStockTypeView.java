@@ -4,7 +4,6 @@ import com.controller.DatabaseController;
 import com.controller.GUIController;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -27,7 +26,7 @@ public class CreateStockTypeView extends JFrame
 
         createStockTypeView.setContentPane(createStockTypePanel);
         createStockTypeView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+
         createStockTypeView.pack();
 
 

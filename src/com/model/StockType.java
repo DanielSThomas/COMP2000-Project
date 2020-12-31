@@ -51,6 +51,11 @@ public class StockType
         return name;
     }
 
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
     public int getNumberInStock()
     {
 
@@ -72,7 +77,7 @@ public class StockType
 
     }
 
-    public void setPrice(int value)
+    public void setPrice(double value)
     {
 
         this.price = value;

@@ -3,6 +3,7 @@ package com.view;
 
 import com.controller.DatabaseController;
 import com.controller.GUIController;
+import com.model.Database;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -160,6 +161,17 @@ public class AdminView extends JFrame
 
                 }
 
+            }
+        });
+
+        btnEditStockType.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                Database.getInstance().storedInt = selectedIndex.intValue();
+                guiController.InitialiseGui();
+                guiController.ChangePage(adminView, guiController.editStockTypeView);
             }
         });
     }

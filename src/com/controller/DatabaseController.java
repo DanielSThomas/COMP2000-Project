@@ -109,8 +109,18 @@ public class DatabaseController
         Database.getInstance().stockType.add(tempStockType);
     }
 
-    public void editStockType()
+    public void editStockType(Integer index, String newName, double newPrice)
     {
+        Database.getInstance().stockType.get(index).setName(newName);
+        Database.getInstance().stockType.get(index).setPrice(newPrice);
+    }
+
+    public void viewSingleStockType(Integer index)
+    {
+        Database.getInstance().stockType.get(index).getName();
+        Database.getInstance().stockType.get(index).getPrice();
+
+
 
     }
 
