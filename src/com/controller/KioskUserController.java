@@ -23,6 +23,7 @@ public class KioskUserController
 
     public void AddToBasket(Integer index)
     {
+
         Database.getInstance().basket.add(Database.getInstance().stockType.get(index));
 
         Database.getInstance().stockType.get(index).getBarcodes().remove(0);
@@ -31,6 +32,29 @@ public class KioskUserController
 
         databaseController.SaveStockData();
     }
+
+    public void ScanItem(String barcode) // Only usable in UnitTest
+    {
+        for (int i = 0; i < Database.getInstance().stockType.size(); i++)
+        {
+            for (int j = 0; j < Database.getInstance().stockType.get(i).getBarcodes().size() ; j++)
+            {
+                if(barcode.equals(Database.getInstance().stockType.get(i).getBarcodes().get(j)))
+                {
+                    Database.getInstance().basket.add(Database.getInstance().stockType.get(i));
+                    Database.getInstance().stockType.get(i).getBarcodes().remove(j);
+
+                    Database.getInstance().stockType.get(i).updateItemCount();
+
+                    databaseController.SaveStockData();
+                }
+            }
+
+        }
+
+
+    }
+
 
     public void CalculateTotalBasket()
     {

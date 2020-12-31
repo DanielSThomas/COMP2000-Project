@@ -4,8 +4,9 @@
     <list default="true" id="edb24861-5e49-4afe-b6a3-fe48bf2d32e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/controller/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/StockType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/StockType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/AdminView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/AdminView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/KioskUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/KioskUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/KioskView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/KioskView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/KioskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/KioskView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/StockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/StockData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,5 +105,19 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/controller/KioskUserController.java</url>
+          <line>35</line>
+          <properties class="com.controller.KioskUserController" method="ScanItem">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

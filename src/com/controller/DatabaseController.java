@@ -82,9 +82,6 @@ public class DatabaseController
         {
             e.printStackTrace();
         }
-
-
-
     }
 
     public void viewStockType(DefaultListModel<String> defaultListModel, JList jList)
@@ -99,7 +96,7 @@ public class DatabaseController
                 defaultListModel.set(i,Database.getInstance().stockType.get(i).getAllInfo() + " !WARNING LOW STOCK! ");
             }
         }
-        
+
         jList.setModel(defaultListModel);
     }
 

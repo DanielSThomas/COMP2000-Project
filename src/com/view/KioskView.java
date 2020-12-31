@@ -24,11 +24,12 @@ public class KioskView extends JFrame
     private JButton btnFandP;
     private JButton btnLogin;
     private JButton btnAddItem;
-    private JButton btnRemoveItem;
     private JPanel kioskPanel;
     private JList lstStock;
     private JList lstBasket;
     private JLabel lblTotalCost;
+    private JTextField txtBarcode;
+    private JButton btnScan;
     private KioskView kioskView;
     private DefaultListModel<String> defaultListModel;
     private DefaultListModel<String> defaultListModel2;
@@ -51,25 +52,11 @@ public class KioskView extends JFrame
 
         kioskUserController.ViewStockType(defaultListModel, lstStock);
 
-//        for (int i = 0; i < Database.getInstance().stockType.size(); i++)
-//        {
-//            defaultListModel.add(i,Database.getInstance().stockType.get(i).getAllInfo());
-//        }
-//
-//
-//
-//        lstStock.setModel(defaultListModel);
+
         kioskView.setContentPane(kioskPanel);
         kioskView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         kioskView.setPreferredSize(new Dimension(500,500));
         kioskUserController.ViewBasket(defaultListModel2,lstBasket);
-
-
-
-
-
-
-
 
 
         kioskView.pack();
@@ -89,14 +76,7 @@ public class KioskView extends JFrame
             }
         });
 
-        btnRemoveItem.addActionListener(new ActionListener()
-        {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
 
-            }
-        });
 
         btnAddItem.addActionListener(new ActionListener()
         {
@@ -112,13 +92,39 @@ public class KioskView extends JFrame
                     kioskUserController.ViewStockType(defaultListModel, lstStock);
 
                     kioskUserController.CalculateTotalBasket();
-                    lblTotalCost.setText("Total Cost £ " + String.valueOf(Database.getInstance().basketTotal)); //round number
+                    lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal)); //round number
                 }
 
                 catch(Exception e1)
                 {
 
                 }
+            }
+        });
+
+
+        btnFandP.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+
+
+            }
+        });
+
+        btnScan.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                kioskUserController.ScanItem(txtBarcode.getText());
+
+                kioskUserController.ViewBasket(defaultListModel2,lstBasket);
+                kioskUserController.ViewStockType(defaultListModel, lstStock);
+
+                kioskUserController.CalculateTotalBasket();
+                lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal));
             }
         });
     }
