@@ -119,22 +119,28 @@ public class DatabaseController
 
     }
 
-    public void orderStock(Integer index)
+    public void orderStock(Integer index, Integer orderCount)
     {
-        String frontBarcode;
-        String backBarcode;
-        String barcode;
+        for (int i = 0; i < orderCount; i++)
+        {
+            String frontBarcode;
+            String backBarcode;
+            String barcode;
 
-        frontBarcode = Database.getInstance().stockType.get(index).getName().substring(0,2);
-        backBarcode = String.valueOf(System.currentTimeMillis());
-        barcode = frontBarcode + backBarcode;
 
-        //Method to order stock
+            frontBarcode = Database.getInstance().stockType.get(index).getName().substring(0,2);
+            backBarcode = String.valueOf(System.currentTimeMillis() + Database.getInstance().stockType.get(index).getBarcodes().size());
+            barcode = frontBarcode + backBarcode;
 
-        //Confirm stock arrived
+            //Method to order stock
 
-        Database.getInstance().stockType.get(index).addBarcode(barcode);
-        Database.getInstance().stockType.get(index).updateItemCount();
+            //Confirm stock arrived
+
+            Database.getInstance().stockType.get(index).addBarcode(barcode);
+            Database.getInstance().stockType.get(index).updateItemCount();
+        }
+
+
 
 
 

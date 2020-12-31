@@ -17,7 +17,7 @@ public class AdminView extends JFrame
     private JList lstStockTypes;
     private JList lstStock;
     private JButton btnDeleteStock;
-    private JButton BtnOrderStock;
+    private JButton btnOrderStock;
     private JButton btnRefresh;
     private JButton btnDeleteStockType;
     private JButton btnEditStockType;
@@ -83,14 +83,17 @@ public class AdminView extends JFrame
             }
         });
 
-        BtnOrderStock.addActionListener(new ActionListener()
+        btnOrderStock.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent e)
             {
                 try
                 {
-                databaseController.orderStock(selectedIndex);
+                    Number number = (Number) spnOrderStock.getValue();
+
+
+                databaseController.orderStock(selectedIndex, number.intValue());
                 databaseController.SaveStockData();
 
 
