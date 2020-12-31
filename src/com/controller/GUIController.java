@@ -1,7 +1,7 @@
 package com.controller;
 
 import com.view.AdminView;
-import com.view.CreateStockType;
+import com.view.CreateStockTypeView;
 import com.view.KioskView;
 import com.view.LoginView;
 
@@ -15,7 +15,7 @@ public class GUIController
 
     public AdminView adminView;
 
-    public CreateStockType createStockType;
+    public CreateStockTypeView createStockTypeView;
 
 
 
@@ -29,7 +29,7 @@ public class GUIController
 
         adminView = new AdminView();
 
-        createStockType = new CreateStockType();
+        createStockTypeView = new CreateStockTypeView();
 
     }
 

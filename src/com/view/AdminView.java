@@ -3,7 +3,6 @@ package com.view;
 
 import com.controller.DatabaseController;
 import com.controller.GUIController;
-import com.model.Database;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -70,7 +69,7 @@ public class AdminView extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 guiController.InitialiseGui();
-                guiController.ChangePage(adminView, guiController.createStockType);
+                guiController.ChangePage(adminView, guiController.createStockTypeView);
             }
         });
 

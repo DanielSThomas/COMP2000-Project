@@ -8,27 +8,27 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CreateStockType extends JFrame
+public class CreateStockTypeView extends JFrame
 {
     private JPanel createStockTypePanel;
     private JTextField txtStockTypeName;
     private JTextField txtStockTypePrice;
     private JButton btnApply;
     private JButton btnCancel;
-    private CreateStockType createStockType;
+    private CreateStockTypeView createStockTypeView;
 
 
-    public CreateStockType()
+    public CreateStockTypeView()
     {
-        createStockType = this;
+        createStockTypeView = this;
 
         DatabaseController databaseController = new DatabaseController();
         GUIController guiController = new GUIController();
 
-        createStockType.setContentPane(createStockTypePanel);
-        createStockType.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        createStockType.setPreferredSize(new Dimension(500,500));
-        createStockType.pack();
+        createStockTypeView.setContentPane(createStockTypePanel);
+        createStockTypeView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        createStockTypeView.setPreferredSize(new Dimension(500,500));
+        createStockTypeView.pack();
 
 
 
@@ -38,7 +38,7 @@ public class CreateStockType extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 guiController.InitialiseGui();
-                guiController.ChangePage(createStockType, guiController.adminView);
+                guiController.ChangePage(createStockTypeView, guiController.adminView);
             }
         });
 
@@ -51,7 +51,7 @@ public class CreateStockType extends JFrame
                 databaseController.SaveStockData();
 
                 guiController.InitialiseGui();
-                guiController.ChangePage(createStockType, guiController.adminView);
+                guiController.ChangePage(createStockTypeView, guiController.adminView);
             }
         });
     }
