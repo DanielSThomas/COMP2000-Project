@@ -16,6 +16,7 @@ public class StockType
 
     private ArrayList<String> barcodes;
 
+
     public StockType(String newName, double newPrice, int newNumberInStock, ArrayList<String> newBarcodes)
     {
         name = newName;

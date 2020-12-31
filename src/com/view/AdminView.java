@@ -56,6 +56,7 @@ public class AdminView extends JFrame
 
 
 
+
         logoutButton.addActionListener(new ActionListener()
         {
             @Override
@@ -103,8 +104,6 @@ public class AdminView extends JFrame
                 databaseController.viewStock(selectedIndex,lstStock,defaultListModel2);
 
                 btnRefresh.setBackground(Color.green);
-
-
 
                 // databaseController.viewStockType(defaultListModel,lstStockTypes);// Needs threading or something, causes crash if viewstock runs at same time
                 }

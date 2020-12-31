@@ -93,8 +93,13 @@ public class DatabaseController
         for (int i = 0; i < Database.getInstance().stockType.size(); i++)
         {
             defaultListModel.add(i,Database.getInstance().stockType.get(i).getAllInfo());
-        }
 
+            if(Database.getInstance().stockType.get(i).getNumberInStock() < 10)
+            {
+                defaultListModel.set(i,Database.getInstance().stockType.get(i).getAllInfo() + " !WARNING LOW STOCK! ");
+            }
+        }
+        
         jList.setModel(defaultListModel);
     }
 
@@ -172,6 +177,7 @@ public class DatabaseController
         jList.setModel(defaultListModel);
 
     }
+
 
 
 
