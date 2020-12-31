@@ -17,15 +17,15 @@ public class AdminView extends JFrame
     private JList lstStockTypes;
     private JList lstStock;
     private JButton btnDeleteStock;
-    private JButton button2;
     private JButton BtnOrderStock;
     private JButton btnRefresh;
     private JButton btnDeleteStockType;
     private JButton btnEditStockType;
     private JButton btnCreateStockType;
-    private JButton button8;
     private JButton logoutButton;
     private JPanel adminPanel;
+    private JSpinner spnOrderStock;
+    private JLabel OrderAmount;
     private AdminView adminView;
     private DefaultListModel<String> defaultListModel;
     private DefaultListModel<String> defaultListModel2;
