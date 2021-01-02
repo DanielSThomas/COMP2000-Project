@@ -12,16 +12,16 @@ public class Database
     public Integer storedInt = 0;
 
 
-    public CashPayment cashPayment;
+    public Payment payment;
 
     //Stock / Admin data
-    public List<StockType> stockType = new ArrayList<StockType>();
+    public ArrayList<StockType> stockType = new ArrayList<StockType>();
 
-    public List<Admin> admins = new ArrayList<Admin>();
+    public ArrayList<Admin> admins = new ArrayList<Admin>();
 
 
     //Payment / Kiosk Data
-    public List<StockType> basket = new ArrayList<StockType>();
+    public ArrayList<StockType> basket = new ArrayList<StockType>();
 
     public Double basketTotal = 0.0;
 

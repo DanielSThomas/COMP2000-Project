@@ -1,6 +1,7 @@
 package com.view;
 
 import com.controller.GUIController;
+import com.controller.PaymentController;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,6 +16,8 @@ public class ReceiptView extends JFrame
     private JPanel receiptPanel;
 
     private ReceiptView receiptView;
+    private PaymentController paymentController;
+    private DefaultListModel defaultListModel;
 
     public ReceiptView()
     {
@@ -24,6 +27,8 @@ public class ReceiptView extends JFrame
         receiptView.setContentPane(receiptPanel);
         receiptView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         receiptView.setPreferredSize(new Dimension(500,500));
+        paymentController = new PaymentController();
+        defaultListModel = new DefaultListModel();
         receiptView.pack();
 
         btnFinish.addActionListener(new ActionListener()
@@ -34,6 +39,14 @@ public class ReceiptView extends JFrame
                 guiController.InitialiseGui();
                 guiController.ChangePage(receiptView, guiController.kioskView);
 
+            }
+        });
+
+        btnPrint.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                paymentController.CalculateRecipt(lstReceipt, defaultListModel);
             }
         });
     }

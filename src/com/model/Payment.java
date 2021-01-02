@@ -22,7 +22,15 @@ public class Payment //Might be useless
         moneyPaid = newMoneyPaid;
         moneyDue = newMoneyDue;
         change = newChange;
+        isCashPayment = isCash;
     }
+
+    public String getAllPaymentInfoCash()
+    {
+        String _string = new String( companyName + "/n" + dateofpurchase + "/n" + moneyDue + "/n" + change + "/n" + "Cash Payment" );
+        return _string;
+    }
+
 
     public String getCompanyName()
     {
@@ -47,5 +55,9 @@ public class Payment //Might be useless
     public double getChange()
     {
         return change;
+    }
+
+    public boolean isCashPayment() {
+        return isCashPayment;
     }
 }
