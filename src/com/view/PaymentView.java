@@ -13,6 +13,7 @@ public class PaymentView
     private JPanel panel1;
     private JButton btnCash;
     private JButton btnCard;
+    private JLabel lblPaymentType;
 
     public void ButtonCompletePayment()
     {
