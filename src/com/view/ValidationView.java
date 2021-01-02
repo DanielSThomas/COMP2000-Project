@@ -4,12 +4,15 @@ import com.controller.GUIController;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ValidationView extends JFrame
 {
     private JButton btnForceFail;
     private JButton btnForcePass;
     private JPanel validationPanel;
+    private JButton btnReturn;
 
     private ValidationView validationView;
 
@@ -26,5 +29,34 @@ public class ValidationView extends JFrame
         validationView.pack();
 
 
+        btnForcePass.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                guiController.InitialiseGui();
+                guiController.ChangePage(validationView, guiController.receiptView);
+            }
+        });
+
+        btnForceFail.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+
+            }
+        });
+
+        btnReturn.addActionListener(new ActionListener()
+        {
+
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                guiController.InitialiseGui();
+                guiController.ChangePage(validationView,guiController.paymentView);
+            }
+        });
     }
 }

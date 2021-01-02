@@ -4,6 +4,8 @@ import com.controller.GUIController;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ReceiptView extends JFrame
 {
@@ -14,7 +16,7 @@ public class ReceiptView extends JFrame
 
     private ReceiptView receiptView;
 
-    ReceiptView()
+    public ReceiptView()
     {
         receiptView = this;
 
@@ -24,5 +26,15 @@ public class ReceiptView extends JFrame
         receiptView.setPreferredSize(new Dimension(500,500));
         receiptView.pack();
 
+        btnFinish.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e) 
+            {
+                guiController.InitialiseGui();
+                guiController.ChangePage(receiptView, guiController.kioskView);
+
+            }
+        });
     }
 }
