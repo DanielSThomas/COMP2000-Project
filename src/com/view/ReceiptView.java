@@ -5,5 +5,5 @@ import javax.swing.*;
 public class ReceiptView {
     private JButton btnPrint;
     private JButton btnFinish;
-    private JList list1;
+    private JList lstReceipt;
 }

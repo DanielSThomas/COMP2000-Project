@@ -17,10 +17,6 @@ public class KioskUserController
 
     public DatabaseController databaseController;
 
-    public Payment payment;
-
-    public Receipt receipt;
-
     public void AddToBasket(Integer index)
     {
 
@@ -103,31 +99,13 @@ public class KioskUserController
         jList.setModel(defaultListModel);
     }
 
-    public void Scan()
-    {
 
-    }
-
-    public void Pay()
-    {
-
-    }
-
-    public void VerifyCard()
-    {
-
-
-    }
 
     public void InitialiseDataBaseController()
     {
         databaseController = new DatabaseController();
     }
 
-
-    public void UpdateView()
-    {
-
-    }
+    
 
 }
