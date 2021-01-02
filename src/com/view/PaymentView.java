@@ -4,10 +4,15 @@ package com.view;
 
 import com.controller.KioskUserController;
 
+import javax.swing.*;
+
 public class PaymentView
 {
 
     public KioskUserController kioskUserController;
+    private JPanel panel1;
+    private JButton btnCash;
+    private JButton btnCard;
 
     public void ButtonCompletePayment()
     {
