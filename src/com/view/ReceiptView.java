@@ -29,7 +29,7 @@ public class ReceiptView extends JFrame
         btnFinish.addActionListener(new ActionListener()
         {
             @Override
-            public void actionPerformed(ActionEvent e) 
+            public void actionPerformed(ActionEvent e)
             {
                 guiController.InitialiseGui();
                 guiController.ChangePage(receiptView, guiController.kioskView);
