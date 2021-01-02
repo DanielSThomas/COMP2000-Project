@@ -16,6 +16,14 @@ public class GUIController
 
     public EditStockTypeView editStockTypeView;
 
+    public PaymentView paymentView;
+
+    public CashPaymentView cashPaymentView;
+
+    public ValidationView validationView;
+
+    public ReceiptView receiptView;
+
 
 
 
@@ -31,6 +39,14 @@ public class GUIController
         createStockTypeView = new CreateStockTypeView();
 
         editStockTypeView = new EditStockTypeView();
+
+        paymentView = new PaymentView();
+
+        cashPaymentView = new CashPaymentView();
+
+        validationView = new ValidationView();
+
+        receiptView = new ReceiptView();
 
     }
 

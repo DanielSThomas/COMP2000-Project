@@ -106,6 +106,6 @@ public class KioskUserController
         databaseController = new DatabaseController();
     }
 
-    
+
 
 }

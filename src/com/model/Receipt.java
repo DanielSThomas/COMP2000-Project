@@ -3,7 +3,7 @@ package com.model;
 
 
 
-public class Receipt
+public class Receipt //Might be useless
 {
 
 
