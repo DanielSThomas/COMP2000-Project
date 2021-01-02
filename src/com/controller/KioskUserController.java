@@ -51,7 +51,6 @@ public class KioskUserController
 
     }
 
-
     public void CalculateTotalBasket()
     {
         double totalCost = 0.0;
@@ -98,8 +97,6 @@ public class KioskUserController
 
         jList.setModel(defaultListModel);
     }
-
-
 
     public void InitialiseDataBaseController()
     {

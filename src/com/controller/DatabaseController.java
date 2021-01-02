@@ -100,8 +100,6 @@ public class DatabaseController
         jList.setModel(defaultListModel);
     }
 
-
-
     public void createStockType(String name, String price)
     {
         Integer numberInStock = 0;
@@ -117,7 +115,7 @@ public class DatabaseController
         Database.getInstance().stockType.get(index).setPrice(newPrice);
     }
 
-    public void viewSingleStockType(Integer index)
+    public void viewSingleStockType(Integer index) //Not used
     {
         Database.getInstance().stockType.get(index).getName();
         Database.getInstance().stockType.get(index).getPrice();
@@ -128,6 +126,7 @@ public class DatabaseController
     {
         Database.getInstance().stockType.remove(index.intValue());
     }
+
 
     public void orderStock(Integer index, Integer orderCount)
     {

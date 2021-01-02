@@ -6,4 +6,5 @@ public class ReceiptView {
     private JButton btnPrint;
     private JButton btnFinish;
     private JList lstReceipt;
+    private JPanel receiptPanel;
 }
