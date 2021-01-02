@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.model.CashPayment;
 import com.model.Database;
 
 import javax.swing.*;
@@ -8,9 +9,9 @@ import java.text.DecimalFormat;
 public class PaymentController
 {
 
-    double cashAdded;
-    double cashDue;
-    double change;
+    public double cashAdded;
+    public double cashDue;
+    public double change;
 
 
     public void CalculateCash(JTextField input, JLabel output)
@@ -35,6 +36,11 @@ public class PaymentController
             return Double.parseDouble(decimalFormat.format(change));
         }
         return 0.0;
+    }
+
+    public void StorePaymentDetails()
+    {
+        Database.getInstance().cashPayment = new CashPayment(cashAdded, cashDue, change);
     }
 
 

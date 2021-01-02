@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 public class CashPaymentView extends JFrame
 {
     private JPanel cashPanel;
-    private JButton completePaymentButton;
+    private JButton btnCompletePayment;
     private JTextField txtCashOverride;
     private JButton btnCashoverride;
     private JButton btnReturn;
@@ -50,11 +50,15 @@ public class CashPaymentView extends JFrame
             }
         });
 
-        completePaymentButton.addActionListener(new ActionListener()
+        btnCompletePayment.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent e)
             {
+
+
+                paymentController.StorePaymentDetails();
+
                 guiController.InitialiseGui();
                 guiController.ChangePage(cashPaymentView, guiController.receiptView);
             }
@@ -69,6 +73,13 @@ public class CashPaymentView extends JFrame
               paymentController.CalculateCash(txtCashOverride, lblAmountPaid);
 
               lblChange.setText("Change : £" + paymentController.CalculateChange());
+
+
+              if (paymentController.cashAdded >= paymentController.cashDue)
+              {
+                  btnCompletePayment.setEnabled(true);
+
+              }
 
             }
         });

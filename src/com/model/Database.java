@@ -12,6 +12,7 @@ public class Database
     public Integer storedInt = 0;
 
 
+    public CashPayment cashPayment;
 
     //Stock / Admin data
     public List<StockType> stockType = new ArrayList<StockType>();
