@@ -6,7 +6,10 @@ import com.controller.GUIController;
 import com.controller.KioskUserController;
 
 import javax.swing.*;
+import javax.swing.text.ChangedCharSetException;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class PaymentView extends JFrame
 {
@@ -32,6 +35,25 @@ public class PaymentView extends JFrame
         paymentView.setPreferredSize(new Dimension(500,500));
         paymentView.pack();
 
+        btnCash.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                guiController.InitialiseGui();
+                guiController.ChangePage(paymentView, guiController.cashPaymentView);
+            }
+        });
+
+        btnCard.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                guiController.InitialiseGui();
+                guiController.ChangePage(paymentView, guiController.validationView);
+            }
+        });
     }
 
 
