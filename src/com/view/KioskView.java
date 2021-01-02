@@ -57,6 +57,7 @@ public class KioskView extends JFrame
         kioskView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         kioskView.setPreferredSize(new Dimension(500,500));
         kioskUserController.ViewBasket(defaultListModel2,lstBasket);
+        lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal));
 
 
         kioskView.pack();
@@ -92,7 +93,7 @@ public class KioskView extends JFrame
                     kioskUserController.ViewStockType(defaultListModel, lstStock);
 
                     kioskUserController.CalculateTotalBasket();
-                    lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal)); //round number
+                    lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal));
                 }
 
                 catch(Exception e1)
