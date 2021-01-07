@@ -1,5 +1,7 @@
 package com.model;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class Database
     //Payment / Kiosk Data
     public ArrayList<StockType> basket = new ArrayList<StockType>();
 
-    public Double basketTotal = 0.0;
+    public BigDecimal basketTotal = new BigDecimal("0.0").setScale(2, RoundingMode.HALF_EVEN);
 
 
 

@@ -75,7 +75,7 @@ public class CashPaymentView extends JFrame
               lblChange.setText("Change : £" + paymentController.CalculateChange());
 
 
-              if (paymentController.cashAdded >= paymentController.cashDue)
+              if (paymentController.cashAdded.doubleValue() >= paymentController.cashDue.doubleValue())
               {
                   btnCompletePayment.setEnabled(true);
 

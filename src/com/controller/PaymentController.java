@@ -5,42 +5,44 @@ import com.model.Payment;
 import com.model.StockType;
 
 import javax.swing.*;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class PaymentController
 {
 
-    public double cashAdded;
-    public double cashDue;
-    public double change;
+    public BigDecimal cashAdded = new BigDecimal(0.0).setScale(2, RoundingMode.HALF_EVEN);
+    public BigDecimal cashDue = new BigDecimal(0.0).setScale(2, RoundingMode.HALF_EVEN);
+    public BigDecimal change = new BigDecimal(0.0).setScale(2, RoundingMode.HALF_EVEN);
     public boolean isCash;
 
 
     public void CalculateCash(JTextField input, JLabel output)
     {
-        DecimalFormat decimalFormat = new DecimalFormat("##.00");
+
 
         cashDue = Database.getInstance().basketTotal;
 
-        cashAdded += Double.parseDouble(input.getText());
+        cashAdded = cashAdded.add(new BigDecimal(input.getText()));
 
-        output.setText("Amount Paid : £" +  Double.parseDouble(decimalFormat.format(cashAdded)));
+        output.setText("Amount Paid : £" +  cashAdded);
 
         isCash = true;
     }
 
-    public double CalculateChange()
+    public BigDecimal CalculateChange()
     {
         DecimalFormat decimalFormat = new DecimalFormat("##.00");
 
-        change = cashAdded - cashDue;
+        change = cashAdded.subtract(cashDue.setScale(2,RoundingMode.HALF_EVEN));
 
-        if (change > 0.0)
+        if (change.doubleValue() > 0.0)
         {
-            return Double.parseDouble(decimalFormat.format(change));
+            return change;
         }
-        return 0.0;
+        return new BigDecimal("0.00");
     }
 
     public void StorePaymentDetails()

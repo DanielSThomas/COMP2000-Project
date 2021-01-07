@@ -6,6 +6,7 @@ import com.sun.source.tree.CatchTree;
 
 import javax.swing.*;
 import java.io.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class DatabaseController
@@ -32,7 +33,7 @@ public class DatabaseController
                     barcodes.add(br.readLine());
                 }
 
-                StockType tempStockType = new StockType(name,Double.parseDouble(price),numberInStock,barcodes);
+                StockType tempStockType = new StockType(name, new BigDecimal(price),numberInStock,barcodes);
 
                 Database.getInstance().stockType.add(tempStockType);
 
@@ -105,11 +106,11 @@ public class DatabaseController
         Integer numberInStock = 0;
         ArrayList<String> barcodes = new ArrayList<String>();
 
-        StockType tempStockType = new StockType(name,Double.parseDouble(price),numberInStock,barcodes);
+        StockType tempStockType = new StockType(name, new BigDecimal(price),numberInStock,barcodes);
         Database.getInstance().stockType.add(tempStockType);
     }
 
-    public void editStockType(Integer index, String newName, double newPrice)
+    public void editStockType(Integer index, String newName, BigDecimal newPrice)
     {
         Database.getInstance().stockType.get(index).setName(newName);
         Database.getInstance().stockType.get(index).setPrice(newPrice);

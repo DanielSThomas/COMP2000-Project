@@ -2,6 +2,8 @@ package com.model;
 
 
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,17 +12,18 @@ public class StockType
 
     private String name;
 
-    private double price;
+    private BigDecimal price;
 
     private int numberInStock;
 
     private ArrayList<String> barcodes;
 
 
-    public StockType(String newName, double newPrice, int newNumberInStock, ArrayList<String> newBarcodes)
+
+    public StockType(String newName, BigDecimal newPrice, int newNumberInStock, ArrayList<String> newBarcodes)
     {
         name = newName;
-        price = newPrice;
+        price = newPrice.setScale(2, RoundingMode.HALF_EVEN);
         numberInStock = newNumberInStock;
         barcodes = newBarcodes;
     }
@@ -77,17 +80,17 @@ public class StockType
 
     }
 
-    public double getPrice()
+    public BigDecimal getPrice()
     {
 
-        return this.price;
+        return this.price.setScale(2,RoundingMode.HALF_EVEN);
 
     }
 
-    public void setPrice(double value)
+    public void setPrice(BigDecimal value)
     {
 
-        this.price = value;
+        this.price = value.setScale(2,RoundingMode.HALF_EVEN);
 
     }
 

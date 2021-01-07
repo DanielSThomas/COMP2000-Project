@@ -10,6 +10,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.nio.channels.ScatteringByteChannel;
 
 public class KioskView extends JFrame
@@ -30,11 +32,13 @@ public class KioskView extends JFrame
     private JLabel lblTotalCost;
     private JTextField txtBarcode;
     private JButton btnScan;
+    private JLabel lblTestField;
     private KioskView kioskView;
     private DefaultListModel<String> defaultListModel;
     private DefaultListModel<String> defaultListModel2;
     private Integer selectedIndex;
     private Integer selectedIndex2;
+    private BigDecimal testDecimal;
 
 
     public KioskView()
@@ -58,6 +62,11 @@ public class KioskView extends JFrame
         kioskView.setPreferredSize(new Dimension(500,500));
         kioskUserController.ViewBasket(defaultListModel2,lstBasket);
         lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal));
+
+        testDecimal = new BigDecimal("24.10");
+        testDecimal = testDecimal.setScale(2, RoundingMode.HALF_EVEN);
+
+        lblTestField.setText(testDecimal.toString());
 
 
         kioskView.pack();

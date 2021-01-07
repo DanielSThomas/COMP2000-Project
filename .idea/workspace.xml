@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edb24861-5e49-4afe-b6a3-fe48bf2d32e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/DatabaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/controller/KioskUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/KioskUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/PaymentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/model/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/ReceiptView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/ReceiptView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/StockType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/StockType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/CashPaymentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/CashPaymentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/EditStockTypeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/EditStockTypeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/KioskView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/KioskView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/KioskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/KioskView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/StockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/StockData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,11 +42,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -107,17 +113,47 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="712" y="364" key="#Notifications" timestamp="1610029616823">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="712" y="364" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1610029616823" />
+    <state width="1473" height="238" key="GridCell.Tab.0.bottom" timestamp="1610042704551">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1473" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610042704551" />
+    <state width="1473" height="238" key="GridCell.Tab.0.center" timestamp="1610042704551">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1473" height="238" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610042704551" />
+    <state width="1473" height="238" key="GridCell.Tab.0.left" timestamp="1610042704550">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1473" height="238" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610042704550" />
+    <state width="1473" height="238" key="GridCell.Tab.0.right" timestamp="1610042704551">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1473" height="238" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610042704551" />
+    <state x="718" y="114" key="SettingsEditor" timestamp="1610029757125">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="718" y="114" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610029757125" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1610029687032">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1610029687032" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/controller/PaymentController.java</url>
-          <line>55</line>
+          <line>57</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/controller/PaymentController.java</url>
-          <line>45</line>
+          <line>47</line>
           <properties class="com.controller.PaymentController" method="StorePaymentDetails">
             <option name="EMULATED" value="true" />
           </properties>

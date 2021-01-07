@@ -1,6 +1,8 @@
 package com.model;
 
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.time.LocalDate;
 
@@ -9,19 +11,19 @@ public class Payment //Might be useless
 
     private String companyName;
     private LocalDate dateofpurchase;
-    private double moneyPaid;
-    private double moneyDue;
-    private double change;
+    public BigDecimal moneyPaid;
+    public BigDecimal moneyDue;
+    public BigDecimal change;
     private boolean isCashPayment;
 
-    public Payment(double newMoneyPaid, double newMoneyDue, double newChange, boolean isCash)
+    public Payment(BigDecimal newMoneyPaid, BigDecimal newMoneyDue, BigDecimal newChange, boolean isCash)
     {
         companyName = "The One Stop Shop";
         dateofpurchase = LocalDate.now();
 
-        moneyPaid = newMoneyPaid;
-        moneyDue = newMoneyDue;
-        change = newChange;
+        moneyPaid = newMoneyPaid.setScale(2,RoundingMode.HALF_EVEN);
+        moneyDue = newMoneyDue.setScale(2,RoundingMode.HALF_EVEN);
+        change = newChange.setScale(2,RoundingMode.HALF_EVEN);
         isCashPayment = isCash;
     }
 
@@ -42,17 +44,17 @@ public class Payment //Might be useless
         return dateofpurchase;
     }
 
-    public double getMoneyPaid()
+    public BigDecimal getMoneyPaid()
     {
         return moneyPaid;
     }
 
-    public double getMoneyDue()
+    public BigDecimal getMoneyDue()
     {
         return moneyDue;
     }
 
-    public double getChange()
+    public BigDecimal getChange()
     {
         return change;
     }

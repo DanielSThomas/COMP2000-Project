@@ -9,6 +9,8 @@ import com.view.LoginView;
 
 import javax.swing.*;
 import javax.xml.crypto.Data;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 public class KioskUserController
@@ -53,23 +55,21 @@ public class KioskUserController
 
     public void CalculateTotalBasket()
     {
-        double totalCost = 0.0;
-        double singleCost = 0.0;
-
-        DecimalFormat decimalFormat = new DecimalFormat("##.00");
+        BigDecimal totalCost = new BigDecimal(0.0).setScale(2, RoundingMode.HALF_EVEN);
+        BigDecimal singleCost = new BigDecimal(0.0).setScale(2, RoundingMode.HALF_EVEN);
 
 
         for (int i = 0; i < Database.getInstance().basket.size(); i++)
         {
 
             singleCost = Database.getInstance().basket.get(i).getPrice();
-            totalCost += Double.parseDouble(decimalFormat.format(singleCost));
+            totalCost = totalCost.add(singleCost);
 
         }
 
 
 
-        Database.getInstance().basketTotal = Double.parseDouble(decimalFormat.format(totalCost));
+        Database.getInstance().basketTotal = totalCost;
 
 
 

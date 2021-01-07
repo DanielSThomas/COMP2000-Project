@@ -7,6 +7,7 @@ import com.model.Database;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.math.BigDecimal;
 
 public class EditStockTypeView extends JFrame
 {
@@ -50,7 +51,7 @@ public class EditStockTypeView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                databaseController.editStockType(Database.getInstance().storedInt, txtStockTypeName.getText(), Double.parseDouble(txtStockTypePrice.getText()));
+                databaseController.editStockType(Database.getInstance().storedInt, txtStockTypeName.getText(), new BigDecimal(txtStockTypePrice.getText()));
                 databaseController.SaveStockData();
 
                 guiController.InitialiseGui();
