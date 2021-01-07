@@ -38,7 +38,7 @@ public class KioskView extends JFrame
     private DefaultListModel<String> defaultListModel2;
     private Integer selectedIndex;
     private Integer selectedIndex2;
-    private BigDecimal testDecimal;
+
 
 
     public KioskView()
@@ -63,10 +63,9 @@ public class KioskView extends JFrame
         kioskUserController.ViewBasket(defaultListModel2,lstBasket);
         lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal));
 
-        testDecimal = new BigDecimal("24.10");
-        testDecimal = testDecimal.setScale(2, RoundingMode.HALF_EVEN);
 
-        lblTestField.setText(testDecimal.toString());
+
+
 
 
         kioskView.pack();

@@ -1,6 +1,7 @@
 package com.view;
 
 import com.controller.GUIController;
+import com.controller.PaymentController;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +15,7 @@ public class ValidationView extends JFrame
     private JButton btnForcePass;
     private JPanel validationPanel;
     private JButton btnReturn;
+    private PaymentController paymentController;
 
     private ValidationView validationView;
 
@@ -27,6 +29,7 @@ public class ValidationView extends JFrame
         validationView.setContentPane(validationPanel);
         validationView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         validationView.setPreferredSize(new Dimension(500,500));
+        paymentController = new PaymentController();
         validationView.pack();
 
 
@@ -35,7 +38,10 @@ public class ValidationView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                showMessageDialog(null, "Payment Accepted");
+               // showMessageDialog(null, "Payment Accepted");
+                paymentController.CardValidation(true);
+                paymentController.StorePaymentDetails();
+
                 guiController.InitialiseGui();
                 guiController.ChangePage(validationView, guiController.receiptView);
             }
@@ -46,7 +52,10 @@ public class ValidationView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                showMessageDialog(null, "!Card Payment Failed!. Please try again or use another payment method.");
+
+                paymentController.CardValidation(false);
+
+                //showMessageDialog(null, "!Card Payment Failed!. Please try again or use another payment method.");
             }
         });
 

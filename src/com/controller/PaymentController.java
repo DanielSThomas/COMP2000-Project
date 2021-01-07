@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 public class PaymentController
 {
@@ -29,6 +30,29 @@ public class PaymentController
         output.setText("Amount Paid : £" +  cashAdded);
 
         isCash = true;
+
+    }
+
+    public void CardValidation(boolean isValid)
+    {
+        isCash = false;
+
+        if (isValid == true)
+        {
+
+            cashDue = Database.getInstance().basketTotal;
+
+            showMessageDialog(null, "Payment Accepted");
+
+        }
+        else
+        {
+            showMessageDialog(null, "!Card Payment Failed!. Please try again or use another payment method.");
+
+        }
+
+
+
 
     }
 
@@ -58,9 +82,8 @@ public class PaymentController
         String paymentInfo;
         ArrayList<StockType> boughtItems;
 
-        if (Database.getInstance().payment.isCashPayment() == true)
-        {
-
+       // if (Database.getInstance().payment.isCashPayment() == true)
+       // {
             paymentInfo = Database.getInstance().payment.getAllPaymentInfoCash();
 
             defaultListModel.clear();
@@ -68,8 +91,17 @@ public class PaymentController
             defaultListModel.add(defaultListModel.getSize(),Database.getInstance().payment.getCompanyName());
             defaultListModel.add(defaultListModel.getSize(),Database.getInstance().payment.getDateofpurchase());
             defaultListModel.add(defaultListModel.getSize(), "Total Cost : £" + Database.getInstance().payment.getMoneyDue());
-            defaultListModel.add(defaultListModel.getSize(), "Change : £" + Database.getInstance().payment.getChange());
-            defaultListModel.add(defaultListModel.getSize(),"Cash Payment");
+
+            if (Database.getInstance().payment.isCashPayment() == true)
+            {
+                defaultListModel.add(defaultListModel.getSize(), "Change : £" + Database.getInstance().payment.getChange());
+                defaultListModel.add(defaultListModel.getSize(),"Cash Payment");
+            }
+            else
+            {
+                defaultListModel.add(defaultListModel.getSize(), "Card Payment");
+            }
+
             defaultListModel.add(defaultListModel.getSize(),"-----Items Bought-----");
 
             for (int i = 0; i < Database.getInstance().basket.size(); i++)
@@ -79,7 +111,7 @@ public class PaymentController
 
             jList.setModel(defaultListModel);
 
-        }
+      //  }
 
 
     }
