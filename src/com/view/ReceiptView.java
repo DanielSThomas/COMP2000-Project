@@ -20,6 +20,8 @@ public class ReceiptView extends JFrame
     private PaymentController paymentController;
     private DefaultListModel defaultListModel;
 
+
+
     public ReceiptView()
     {
         receiptView = this;

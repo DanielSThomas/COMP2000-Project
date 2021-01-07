@@ -84,7 +84,7 @@ public class PaymentController
 
        // if (Database.getInstance().payment.isCashPayment() == true)
        // {
-            paymentInfo = Database.getInstance().payment.getAllPaymentInfoCash();
+            
 
             defaultListModel.clear();
 

@@ -3,7 +3,6 @@ package com.controller;
 
 import com.model.Database;
 import com.model.Payment;
-import com.model.Receipt;
 import com.view.KioskView;
 import com.view.LoginView;
 
