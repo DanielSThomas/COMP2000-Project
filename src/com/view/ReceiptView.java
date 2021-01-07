@@ -22,13 +22,12 @@ public class ReceiptView extends JFrame
     private DefaultListModel defaultListModel;
 
     private Thread thread1;
-    private Thread thread2;
-
 
     private PanelOneThread panelOneThread;
-    private PanelTwoThread panelTwoThread;
 
-    public boolean waiting = true;
+
+
+    public boolean receiptLoaded = false;
 
 
 
@@ -44,12 +43,8 @@ public class ReceiptView extends JFrame
         defaultListModel = new DefaultListModel();
 
 
-
-
         receiptView.pack();
-
-
-
+        
 
         btnFinish.addActionListener(new ActionListener()
         {
@@ -63,29 +58,24 @@ public class ReceiptView extends JFrame
             }
         });
 
+
         btnPrint.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent e)
             {
 
-                panelOneThread = new PanelOneThread();
-                thread1 = new Thread(panelOneThread);
+                if (receiptLoaded == false)
+                {
+                    panelOneThread = new PanelOneThread();
+                    thread1 = new Thread(panelOneThread);
 
-                panelTwoThread = new PanelTwoThread();
-                thread2 = new Thread(panelTwoThread);
+                    thread1.start();
 
-                thread1.start();
-                thread2.start();
-
-                waiting = false;
-
-                paymentController.CalculateRecipt(lstReceipt, defaultListModel);
-
+                }
 
             }
         });
-
     }
 
 
@@ -96,37 +86,24 @@ public class ReceiptView extends JFrame
             Thread t = Thread.currentThread();
             try
             {
-                System.out.println(Thread.currentThread().getName() + " is waiting");
-                while (waiting == true)
-                {
-                    Thread.sleep(1000);
-                }
+                System.out.println(Thread.currentThread().getName() + " started");
+
+
+                paymentController.CalculateRecipt(lstReceipt, defaultListModel);
+                lstReceipt.setModel(defaultListModel);
+
+
             } catch (Exception e)
             {
 
             }
+
+            receiptLoaded = true;
             System.out.println(Thread.currentThread().getName() + " finished");
+
         }
     }
 
-    public class PanelTwoThread implements Runnable
-    {
-        public void run()
-        {
-            try
-            {
-                System.out.println(Thread.currentThread().getName() + " is waiting");
-                thread1.join();
-
-                lstReceipt.setModel(defaultListModel);
-            }
-            catch(Exception e)
-            {
-
-            }
-            System.out.println(Thread.currentThread().getName() + " finished");
-        }
-    }
 
 }
 

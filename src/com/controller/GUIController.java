@@ -52,7 +52,7 @@ public class GUIController
 
     public void ChangePage(JFrame currentPage, JFrame targetPage)
     {
-        InitialiseGui();
+
 
         currentPage.setVisible(false);
 
