@@ -57,6 +57,7 @@ public class PaymentController
 
         if (Database.getInstance().payment.isCashPayment() == true)
         {
+
             paymentInfo = Database.getInstance().payment.getAllPaymentInfoCash();
 
             defaultListModel.clear();
@@ -70,12 +71,11 @@ public class PaymentController
 
             for (int i = 0; i < Database.getInstance().basket.size(); i++)
             {
-                defaultListModel.add(defaultListModel.getSize(),Database.getInstance().basket.get(i).getAllInfo());
+                defaultListModel.add(defaultListModel.getSize(),Database.getInstance().basket.get(i).getBasketInfo());
             }
 
-
-
             jList.setModel(defaultListModel);
+
         }
 
 
