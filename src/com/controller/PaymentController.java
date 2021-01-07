@@ -22,7 +22,6 @@ public class PaymentController
     public void CalculateCash(JTextField input, JLabel output)
     {
 
-
         cashDue = Database.getInstance().basketTotal;
 
         cashAdded = cashAdded.add(new BigDecimal(input.getText()));
@@ -30,10 +29,12 @@ public class PaymentController
         output.setText("Amount Paid : £" +  cashAdded);
 
         isCash = true;
+
     }
 
     public BigDecimal CalculateChange()
     {
+
         DecimalFormat decimalFormat = new DecimalFormat("##.00");
 
         change = cashAdded.subtract(cashDue.setScale(2,RoundingMode.HALF_EVEN));
@@ -42,7 +43,9 @@ public class PaymentController
         {
             return change;
         }
+
         return new BigDecimal("0.00");
+
     }
 
     public void StorePaymentDetails()
@@ -79,11 +82,6 @@ public class PaymentController
         }
 
 
-
-
-
     }
-
-
 
 }

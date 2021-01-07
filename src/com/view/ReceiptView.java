@@ -2,6 +2,7 @@ package com.view;
 
 import com.controller.GUIController;
 import com.controller.PaymentController;
+import com.model.Database;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,6 +37,7 @@ public class ReceiptView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
+                Database.getInstance().basket.clear();
                 guiController.InitialiseGui();
                 guiController.ChangePage(receiptView, guiController.kioskView);
 
@@ -47,6 +49,8 @@ public class ReceiptView extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 paymentController.CalculateRecipt(lstReceipt, defaultListModel);
+
+
             }
         });
     }
