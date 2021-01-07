@@ -82,10 +82,6 @@ public class PaymentController
         String paymentInfo;
         ArrayList<StockType> boughtItems;
 
-       // if (Database.getInstance().payment.isCashPayment() == true)
-       // {
-            
-
             defaultListModel.clear();
 
             defaultListModel.add(defaultListModel.getSize(),Database.getInstance().payment.getCompanyName());
@@ -109,9 +105,7 @@ public class PaymentController
                 defaultListModel.add(defaultListModel.getSize(),Database.getInstance().basket.get(i).getBasketInfo());
             }
 
-            jList.setModel(defaultListModel);
-
-      //  }
+          //  jList.setModel(defaultListModel);
 
 
     }
