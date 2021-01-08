@@ -7,29 +7,28 @@ import java.util.List;
 
 public class Database
 {
-    // static variable single_instance of type Singleton
+
     private static Database single_instance = null;
 
-    // Placeholder variable used to transfer a Integer between Views or Controllers
+    // Placeholder variable used to transfer a Integer
     public Integer storedInt = 0;
 
 
-    public Payment payment;
-
-    //Stock / Admin data
+    //Stock Data
     public ArrayList<StockType> stockType = new ArrayList<StockType>();
 
-
-
+    
     //Payment / Kiosk Data
     public ArrayList<StockType> basket = new ArrayList<StockType>();
+
+
+    public Payment payment;
 
     public BigDecimal basketTotal = new BigDecimal("0.0").setScale(2, RoundingMode.HALF_EVEN);
 
 
 
-
-    // static method to create instance of Singleton class
+    // Create instance of Singleton class
     public static Database getInstance()
     {
         if (single_instance == null)

@@ -40,7 +40,7 @@ public class PaymentView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("CashPaymentView");
                 guiController.ChangePage(paymentView, guiController.cashPaymentView);
             }
         });
@@ -50,7 +50,7 @@ public class PaymentView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("ValidationView");
                 guiController.ChangePage(paymentView, guiController.validationView);
             }
         });

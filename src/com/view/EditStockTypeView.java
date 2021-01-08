@@ -41,7 +41,7 @@ public class EditStockTypeView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("AdminView");
                 guiController.ChangePage(editStockTypeView, guiController.adminView);
             }
         });
@@ -54,7 +54,7 @@ public class EditStockTypeView extends JFrame
                 databaseController.editStockType(Database.getInstance().storedInt, txtStockTypeName.getText(), new BigDecimal(txtStockTypePrice.getText()));
                 databaseController.SaveStockData();
 
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("AdminView");
                 guiController.ChangePage(editStockTypeView, guiController.adminView);
             }
         });

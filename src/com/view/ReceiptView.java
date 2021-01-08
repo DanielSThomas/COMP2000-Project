@@ -52,7 +52,7 @@ public class ReceiptView extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 Database.getInstance().basket.clear();
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("KioskView");
                 guiController.ChangePage(receiptView, guiController.kioskView);
 
             }

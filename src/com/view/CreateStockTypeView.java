@@ -36,7 +36,7 @@ public class CreateStockTypeView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("AdminView");
                 guiController.ChangePage(createStockTypeView, guiController.adminView);
             }
         });
@@ -49,7 +49,7 @@ public class CreateStockTypeView extends JFrame
                 databaseController.createStockType(txtStockTypeName.getText(),txtStockTypePrice.getText());
                 databaseController.SaveStockData();
 
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("AdminView");
                 guiController.ChangePage(createStockTypeView, guiController.adminView);
             }
         });

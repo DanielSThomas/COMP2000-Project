@@ -78,8 +78,7 @@ public class KioskView extends JFrame
             {
 
 
-
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("LoginView");
                 guiController.ChangePage(kioskView, guiController.loginView);
 
             }
@@ -119,7 +118,7 @@ public class KioskView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("PaymentView");
                 guiController.ChangePage(kioskView, guiController.paymentView);
             }
         });

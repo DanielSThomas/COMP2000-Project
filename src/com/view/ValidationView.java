@@ -42,7 +42,7 @@ public class ValidationView extends JFrame
                 paymentController.CardValidation(true);
                 paymentController.StorePaymentDetails();
 
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("ReceiptView");
                 guiController.ChangePage(validationView, guiController.receiptView);
             }
         });
@@ -65,7 +65,7 @@ public class ValidationView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("PaymentView");
                 guiController.ChangePage(validationView,guiController.paymentView);
             }
         });

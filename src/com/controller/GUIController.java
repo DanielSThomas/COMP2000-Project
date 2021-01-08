@@ -6,53 +6,67 @@ import javax.swing.*;
 
 public class GUIController
 {
-    public LoginView loginView;
-
     public KioskView kioskView;
-
+    public LoginView loginView;
     public AdminView adminView;
-
     public CreateStockTypeView createStockTypeView;
-
     public EditStockTypeView editStockTypeView;
-
     public PaymentView paymentView;
-
     public CashPaymentView cashPaymentView;
-
     public ValidationView validationView;
-
     public ReceiptView receiptView;
 
+    //Used to initialise a page (view) in preparation for ChangePage()
 
-
-
-    public void InitialiseGui()
+    public void InitialiseGui(String viewName)
     {
 
-        kioskView = new KioskView();
+        switch (viewName)
+        {
+            case "KioskView":
+            kioskView = new KioskView();
+            break;
 
-        loginView = new LoginView();
+            case "LoginView":
+            loginView = new LoginView();
+            break;
 
-        adminView = new AdminView();
+            case "AdminView":
+            adminView = new AdminView();
+            break;
 
-        createStockTypeView = new CreateStockTypeView();
+            case "CreateStockTypeView":
+            createStockTypeView = new CreateStockTypeView();
+            break;
 
-        editStockTypeView = new EditStockTypeView();
+            case "EditStockTypeView":
+            editStockTypeView = new EditStockTypeView();
+            break;
 
-        paymentView = new PaymentView();
+            case "PaymentView":
+            paymentView = new PaymentView();
+            break;
 
-        cashPaymentView = new CashPaymentView();
+            case "CashPaymentView":
+            cashPaymentView = new CashPaymentView();
+            break;
 
-        validationView = new ValidationView();
+            case "ValidationView":
+            validationView = new ValidationView();
+            break;
 
-        receiptView = new ReceiptView();
+            case "ReceiptView":
+            receiptView = new ReceiptView();
+            break;
+        }
+
+
+
 
     }
 
     public void ChangePage(JFrame currentPage, JFrame targetPage)
     {
-
 
         currentPage.setVisible(false);
 

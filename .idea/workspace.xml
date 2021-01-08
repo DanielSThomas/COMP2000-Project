@@ -20,7 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edb24861-5e49-4afe-b6a3-fe48bf2d32e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/GUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/GUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/AdminView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/AdminView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/CashPaymentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/CashPaymentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/CreateStockTypeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/CreateStockTypeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/EditStockTypeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/EditStockTypeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/KioskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/KioskView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/PaymentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/PaymentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/ReceiptView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/ReceiptView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/ValidationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/ValidationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/StockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/StockData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,22 +141,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="466" height="447" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1610133345395" />
-    <state width="1618" height="230" key="GridCell.Tab.0.bottom" timestamp="1610137817341">
+    <state width="1618" height="230" key="GridCell.Tab.0.bottom" timestamp="1610139566174">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1618" height="230" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610137817341" />
-    <state width="1618" height="230" key="GridCell.Tab.0.center" timestamp="1610137817341">
+    <state width="1618" height="230" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610139566174" />
+    <state width="1618" height="230" key="GridCell.Tab.0.center" timestamp="1610139566173">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1618" height="230" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610137817341" />
-    <state width="1618" height="230" key="GridCell.Tab.0.left" timestamp="1610137817341">
+    <state width="1618" height="230" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610139566173" />
+    <state width="1618" height="230" key="GridCell.Tab.0.left" timestamp="1610139566173">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1618" height="230" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610137817341" />
-    <state width="1618" height="230" key="GridCell.Tab.0.right" timestamp="1610137817341">
+    <state width="1618" height="230" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610139566173" />
+    <state width="1618" height="230" key="GridCell.Tab.0.right" timestamp="1610139566173">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1618" height="230" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610137817341" />
+    <state width="1618" height="230" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610139566173" />
     <state width="1618" height="258" key="GridCell.Tab.1.bottom" timestamp="1610137778106">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

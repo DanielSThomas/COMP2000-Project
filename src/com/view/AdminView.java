@@ -62,7 +62,7 @@ public class AdminView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("KioskView");
                 guiController.ChangePage(adminView, guiController.kioskView);
             }
         });
@@ -72,7 +72,7 @@ public class AdminView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("CreateStockTypeView");
                 guiController.ChangePage(adminView, guiController.createStockTypeView);
             }
         });
@@ -121,7 +121,7 @@ public class AdminView extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 //adminView.dispose();
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("AdminView");
                 guiController.ChangePage(adminView, guiController.adminView);
             }
         });
@@ -137,7 +137,7 @@ public class AdminView extends JFrame
                 databaseController.SaveStockData();
 
                 //adminView.dispose();
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("AdminView");
                 guiController.ChangePage(adminView, guiController.adminView);
 
             }
@@ -171,7 +171,7 @@ public class AdminView extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 Database.getInstance().storedInt = selectedIndex.intValue();
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("EditStockTypeView");
                 guiController.ChangePage(adminView, guiController.editStockTypeView);
             }
         });

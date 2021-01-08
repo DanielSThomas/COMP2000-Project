@@ -44,7 +44,7 @@ public class LoginView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                guiController.InitialiseGui();
+                guiController.InitialiseGui("KioskView");
                 guiController.ChangePage(loginView, guiController.kioskView);
 
             }
@@ -62,7 +62,7 @@ public class LoginView extends JFrame
                    if (loginController.Login(txtUsername.getText(),txtPassword.getPassword())== true)
                    {
 
-                       guiController.InitialiseGui();
+                       guiController.InitialiseGui("AdminView");
                        guiController.ChangePage(loginView, guiController.adminView);
                    }
                    else
