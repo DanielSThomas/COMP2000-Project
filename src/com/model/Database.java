@@ -19,7 +19,6 @@ public class Database
     //Stock / Admin data
     public ArrayList<StockType> stockType = new ArrayList<StockType>();
 
-    public ArrayList<Admin> admins = new ArrayList<Admin>();
 
 
     //Payment / Kiosk Data

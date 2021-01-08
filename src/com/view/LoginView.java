@@ -1,11 +1,15 @@
 package com.view;
 
 import com.controller.GUIController;
+import com.controller.LoginController;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 public class LoginView extends JFrame
 {
@@ -14,6 +18,8 @@ public class LoginView extends JFrame
     private JPasswordField txtPassword;
     private JButton btnLogin;
     private JButton btnCancel;
+    private LoginController loginController;
+    private GUIController guiController;
 
     private LoginView loginView;
 
@@ -25,7 +31,9 @@ public class LoginView extends JFrame
         loginView = this;
 
         //KioskUserController kioskUserController = new KioskUserController();
-        GUIController guiController = new GUIController();
+        guiController = new GUIController();
+        loginController = new LoginController();
+
         loginView.setContentPane(loginPanel);
         loginView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         loginView.setPreferredSize(new Dimension(500,500));
@@ -47,11 +55,26 @@ public class LoginView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                if (txtUsername.getText().equals("admin")) //Placeholder login
+
+
+                try
                 {
-                    guiController.InitialiseGui();
-                    guiController.ChangePage(loginView, guiController.adminView);
+                   if (loginController.Login(txtUsername.getText(),txtPassword.getPassword())== true)
+                   {
+
+                       guiController.InitialiseGui();
+                       guiController.ChangePage(loginView, guiController.adminView);
+                   }
+                   else
+                   {
+                       showMessageDialog(null, "Invalid Username or Password");
+                   }
                 }
+                catch (NoSuchAlgorithmException | InvalidKeySpecException noSuchAlgorithmException)
+                {
+                    noSuchAlgorithmException.printStackTrace();
+                }
+
 
 
             }

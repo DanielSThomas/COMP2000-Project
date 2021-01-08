@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import static javax.swing.JOptionPane.showMessageDialog;
+
 
 public class ValidationView extends JFrame
 {
@@ -38,7 +38,7 @@ public class ValidationView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-               // showMessageDialog(null, "Payment Accepted");
+
                 paymentController.CardValidation(true);
                 paymentController.StorePaymentDetails();
 
@@ -55,7 +55,7 @@ public class ValidationView extends JFrame
 
                 paymentController.CardValidation(false);
 
-                //showMessageDialog(null, "!Card Payment Failed!. Please try again or use another payment method.");
+
             }
         });
 
