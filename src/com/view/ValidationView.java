@@ -15,7 +15,9 @@ public class ValidationView extends JFrame
     private JButton btnForcePass;
     private JPanel validationPanel;
     private JButton btnReturn;
+
     private PaymentController paymentController;
+    private GUIController guiController;
 
     private ValidationView validationView;
 
@@ -24,12 +26,13 @@ public class ValidationView extends JFrame
     {
 
         validationView = this;
+        guiController = new GUIController();
+        paymentController = new PaymentController();
 
-        GUIController guiController = new GUIController();
         validationView.setContentPane(validationPanel);
         validationView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        validationView.setPreferredSize(new Dimension(500,500));
-        paymentController = new PaymentController();
+
+
         validationView.pack();
 
 
@@ -38,7 +41,6 @@ public class ValidationView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-
                 paymentController.CardValidation(true);
                 paymentController.StorePaymentDetails();
 
@@ -61,7 +63,6 @@ public class ValidationView extends JFrame
 
         btnReturn.addActionListener(new ActionListener()
         {
-
             @Override
             public void actionPerformed(ActionEvent e)
             {

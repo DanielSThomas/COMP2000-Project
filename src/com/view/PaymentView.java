@@ -14,25 +14,24 @@ import java.awt.event.ActionListener;
 public class PaymentView extends JFrame
 {
 
-    public KioskUserController kioskUserController;
     private JPanel paymentPanel;
     private JButton btnCash;
     private JButton btnCard;
-    private JLabel lblPaymentType;
 
     private PaymentView paymentView;
+
+    private GUIController guiController;
 
 
     public PaymentView()
     {
         //Adds reference to "this" page
         paymentView = this;
+        guiController = new GUIController();
 
-        //KioskUserController kioskUserController = new KioskUserController();
-        GUIController guiController = new GUIController();
         paymentView.setContentPane(paymentPanel);
         paymentView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        paymentView.setPreferredSize(new Dimension(500,500));
+
         paymentView.pack();
 
         btnCash.addActionListener(new ActionListener()

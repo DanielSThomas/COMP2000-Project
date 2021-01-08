@@ -85,6 +85,7 @@ public class DatabaseController
         }
     }
 
+
     public void viewStockType(DefaultListModel<String> defaultListModel, JList jList)
     {
         defaultListModel.clear();
@@ -114,13 +115,6 @@ public class DatabaseController
     {
         Database.getInstance().stockType.get(index).setName(newName);
         Database.getInstance().stockType.get(index).setPrice(newPrice);
-    }
-
-    public void viewSingleStockType(Integer index) //Not used
-    {
-        Database.getInstance().stockType.get(index).getName();
-        Database.getInstance().stockType.get(index).getPrice();
-
     }
 
     public void deleteStockType(Integer index)

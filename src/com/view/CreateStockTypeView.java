@@ -16,19 +16,19 @@ public class CreateStockTypeView extends JFrame
     private JButton btnCancel;
     private CreateStockTypeView createStockTypeView;
 
+    private DatabaseController databaseController;
+    private GUIController guiController;
 
     public CreateStockTypeView()
     {
         createStockTypeView = this;
-
-        DatabaseController databaseController = new DatabaseController();
-        GUIController guiController = new GUIController();
+        databaseController = new DatabaseController();
+        guiController = new GUIController();
 
         createStockTypeView.setContentPane(createStockTypePanel);
         createStockTypeView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         createStockTypeView.pack();
-
 
 
         btnCancel.addActionListener(new ActionListener()

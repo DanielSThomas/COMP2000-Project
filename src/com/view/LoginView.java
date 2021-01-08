@@ -29,8 +29,6 @@ public class LoginView extends JFrame
     {
         //Adds reference to "this" page
         loginView = this;
-
-        //KioskUserController kioskUserController = new KioskUserController();
         guiController = new GUIController();
         loginController = new LoginController();
 
@@ -46,7 +44,6 @@ public class LoginView extends JFrame
             {
                 guiController.InitialiseGui("KioskView");
                 guiController.ChangePage(loginView, guiController.kioskView);
-
             }
         });
 
@@ -55,8 +52,6 @@ public class LoginView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-
-
                 try
                 {
                    if (loginController.Login(txtUsername.getText(),txtPassword.getPassword())== true)
@@ -74,8 +69,6 @@ public class LoginView extends JFrame
                 {
                     noSuchAlgorithmException.printStackTrace();
                 }
-
-
 
             }
         });

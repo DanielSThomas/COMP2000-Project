@@ -13,7 +13,6 @@ import java.awt.event.*;
 
 public class AdminView extends JFrame
 {
-    public DatabaseController databaseController;
 
     private JList lstStockTypes;
     private JList lstStock;
@@ -26,35 +25,34 @@ public class AdminView extends JFrame
     private JButton logoutButton;
     private JPanel adminPanel;
     private JSpinner spnOrderStock;
-    private JLabel OrderAmount;
     private AdminView adminView;
     private DefaultListModel<String> defaultListModel;
     private DefaultListModel<String> defaultListModel2;
     private Integer selectedIndex;
     private Integer selectedIndex2;
 
+    private DatabaseController databaseController;
+    private GUIController guiController;
+
 
     public AdminView()
     {
         adminView = this;
 
+        databaseController = new DatabaseController();
+        guiController = new GUIController();
 
-        DatabaseController databaseController = new DatabaseController();
-        GUIController guiController = new GUIController();
         adminView.setContentPane(adminPanel);
         adminView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
         adminView.pack();
+
         databaseController.LoadStockData();
 
         defaultListModel = new DefaultListModel<String>();
         defaultListModel2 = new DefaultListModel<String>();
 
         databaseController.viewStockType(defaultListModel,lstStockTypes);
-
-
-
 
 
         logoutButton.addActionListener(new ActionListener()
@@ -94,18 +92,15 @@ public class AdminView extends JFrame
             {
                 try
                 {
+                    //Get value of number spinner
                     Number objectToInt = (Number) spnOrderStock.getValue();
 
                 databaseController.orderStock(selectedIndex, objectToInt.intValue());
                 databaseController.SaveStockData();
-
-
-
                 databaseController.viewStock(selectedIndex,lstStock,defaultListModel2);
 
                 btnRefresh.setBackground(Color.green);
 
-                // databaseController.viewStockType(defaultListModel,lstStockTypes);// Needs threading or something, causes crash if viewstock runs at same time
                 }
                 catch (Exception e1)
                 {
@@ -120,7 +115,7 @@ public class AdminView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                //adminView.dispose();
+
                 guiController.InitialiseGui("AdminView");
                 guiController.ChangePage(adminView, guiController.adminView);
             }
@@ -136,7 +131,6 @@ public class AdminView extends JFrame
                 databaseController.deleteStockType(selectedIndex);
                 databaseController.SaveStockData();
 
-                //adminView.dispose();
                 guiController.InitialiseGui("AdminView");
                 guiController.ChangePage(adminView, guiController.adminView);
 
@@ -170,7 +164,9 @@ public class AdminView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                Database.getInstance().storedInt = selectedIndex.intValue();
+                //Pass the selected index to the database for late access by the editview
+                Database.getInstance().storedInt = selectedIndex;
+
                 guiController.InitialiseGui("EditStockTypeView");
                 guiController.ChangePage(adminView, guiController.editStockTypeView);
             }

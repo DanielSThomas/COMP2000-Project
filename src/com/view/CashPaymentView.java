@@ -22,6 +22,7 @@ public class CashPaymentView extends JFrame
 
     private CashPaymentView cashPaymentView;
     private PaymentController paymentController;
+    private GUIController guiController;
 
 
 
@@ -31,12 +32,13 @@ public class CashPaymentView extends JFrame
             //Adds reference to "this" page
             cashPaymentView = this;
             paymentController = new PaymentController();
+            guiController = new GUIController();
 
-            GUIController guiController = new GUIController();
             cashPaymentView.setContentPane(cashPanel);
             cashPaymentView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            cashPaymentView.setPreferredSize(new Dimension(500,500));
+
             lblAmountDue.setText("Amount due : £" + String.valueOf(Database.getInstance().basketTotal));
+
             cashPaymentView.pack();
 
 

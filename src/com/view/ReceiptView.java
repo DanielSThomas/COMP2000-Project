@@ -19,31 +19,28 @@ public class ReceiptView extends JFrame
     private JPanel receiptPanel;
 
     private ReceiptView receiptView;
+
     private PaymentController paymentController;
+    private GUIController guiController;
 
     private DefaultListModel defaultListModel;
 
-    private Thread thread1;
+    private Thread thread;
 
-    private PanelOneThread panelOneThread;
-
-
+    private PanelThread panelThread;
 
     public boolean receiptLoaded = false;
-
-
 
     public ReceiptView()
     {
         receiptView = this;
+        guiController = new GUIController();
 
-        GUIController guiController = new GUIController();
         receiptView.setContentPane(receiptPanel);
         receiptView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        receiptView.setPreferredSize(new Dimension(500,500));
+
         paymentController = new PaymentController();
         defaultListModel = new DefaultListModel();
-
 
         receiptView.pack();
         
@@ -70,10 +67,10 @@ public class ReceiptView extends JFrame
 
                 if (receiptLoaded == false)
                 {
-                    panelOneThread = new PanelOneThread();
-                    thread1 = new Thread(panelOneThread);
+                    panelThread = new PanelThread();
+                    thread = new Thread(panelThread);
 
-                    thread1.start();
+                    thread.start();
 
                 }
 
@@ -82,7 +79,7 @@ public class ReceiptView extends JFrame
     }
 
 
-    public class PanelOneThread implements Runnable
+    public class PanelThread implements Runnable
     {
         public void run()
         {

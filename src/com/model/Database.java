@@ -17,8 +17,7 @@ public class Database
     //Stock Data
     public ArrayList<StockType> stockType = new ArrayList<StockType>();
 
-
-    //Payment / Kiosk Data
+    //Basket Data
     public ArrayList<StockType> basket = new ArrayList<StockType>();
 
 

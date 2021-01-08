@@ -16,13 +16,6 @@ import java.nio.channels.ScatteringByteChannel;
 
 public class KioskView extends JFrame
 {
-    public StockType[] inStockType;
-
-
-
-    public LoginView loginView;
-
-    public KioskUserController kioskUserController;
     private JButton btnFandP;
     private JButton btnLogin;
     private JButton btnAddItem;
@@ -32,41 +25,35 @@ public class KioskView extends JFrame
     private JLabel lblTotalCost;
     private JTextField txtBarcode;
     private JButton btnScan;
-    private JLabel lblTestField;
     private KioskView kioskView;
     private DefaultListModel<String> defaultListModel;
     private DefaultListModel<String> defaultListModel2;
     private Integer selectedIndex;
     private Integer selectedIndex2;
 
+    private KioskUserController kioskUserController;
+    private GUIController guiController;
 
 
     public KioskView()
     {
         kioskView = this;
-        GUIController guiController = new GUIController();
+        guiController = new GUIController();
         kioskUserController = new KioskUserController();
+
         kioskUserController.InitialiseDataBaseController();
         kioskUserController.databaseController.LoadStockData();
-
-
 
         defaultListModel = new DefaultListModel<String>();
         defaultListModel2 = new DefaultListModel<String>();
 
         kioskUserController.ViewStockType(defaultListModel, lstStock);
 
-
         kioskView.setContentPane(kioskPanel);
         kioskView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         kioskView.setPreferredSize(new Dimension(500,500));
         kioskUserController.ViewBasket(defaultListModel2,lstBasket);
         lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal));
-
-
-
-
-
 
         kioskView.pack();
 

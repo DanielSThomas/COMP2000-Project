@@ -19,7 +19,6 @@ public class StockType
     private ArrayList<String> barcodes;
 
 
-
     public StockType(String newName, BigDecimal newPrice, int newNumberInStock, ArrayList<String> newBarcodes)
     {
         name = newName;
@@ -68,30 +67,22 @@ public class StockType
 
     public int getNumberInStock()
     {
-
         return this.numberInStock;
-
     }
 
     public void setItemCount(int value)
     {
-
         this.numberInStock = value;
-
     }
 
     public BigDecimal getPrice()
     {
-
         return this.price.setScale(2,RoundingMode.HALF_EVEN);
-
     }
 
     public void setPrice(BigDecimal value)
     {
-
         this.price = value.setScale(2,RoundingMode.HALF_EVEN);
-
     }
 
 }

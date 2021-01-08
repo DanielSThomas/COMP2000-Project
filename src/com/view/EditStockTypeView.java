@@ -18,13 +18,15 @@ public class EditStockTypeView extends JFrame
     private JTextField txtStockTypePrice;
     private EditStockTypeView editStockTypeView;
 
+    private DatabaseController databaseController;
+    private GUIController guiController;
+
     public EditStockTypeView()
     {
 
         editStockTypeView = this;
-
-        DatabaseController databaseController = new DatabaseController();
-        GUIController guiController = new GUIController();
+        databaseController = new DatabaseController();
+        guiController = new GUIController();
 
         editStockTypeView.setContentPane(editStockTypePanel);
         editStockTypeView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
