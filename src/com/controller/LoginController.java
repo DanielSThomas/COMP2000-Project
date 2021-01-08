@@ -1,5 +1,7 @@
 package com.controller;
 
+import com.model.Admin;
+
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import java.security.NoSuchAlgorithmException;
@@ -11,12 +13,12 @@ import java.util.Base64;
 public class LoginController
 {
 
-    private String username = "admin";
-    private String password = "CPMvT/pYiZyJwvTBF0ugcQ==";
+   private Admin admin = new Admin();
 
 
     public Boolean Login(String _username, char[] _password) throws NoSuchAlgorithmException, InvalidKeySpecException
     {
+
 
         //PBKDF2 Hashing without random salt
 
@@ -25,9 +27,8 @@ public class LoginController
         byte[] hash = secretKeyFactory.generateSecret(keySpec).getEncoded();
         Base64.Encoder encoder = Base64.getEncoder();
 
-        System.out.println("Hash : " + encoder.encodeToString(hash));
 
-        if ( _username.equals(username) && encoder.encodeToString(hash).equals(password))
+        if ( _username.equals(admin.getUsername()) && encoder.encodeToString(hash).equals(admin.getPassword()))
         {
             return true;
         }
