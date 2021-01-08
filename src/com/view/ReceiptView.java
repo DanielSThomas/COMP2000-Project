@@ -8,6 +8,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class ReceiptView extends JFrame
 {
@@ -52,6 +54,7 @@ public class ReceiptView extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 Database.getInstance().basket.clear();
+                Database.getInstance().basketTotal = new BigDecimal(0.00).setScale(2, RoundingMode.HALF_EVEN);
                 guiController.InitialiseGui("KioskView");
                 guiController.ChangePage(receiptView, guiController.kioskView);
 
