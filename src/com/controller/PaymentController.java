@@ -33,28 +33,7 @@ public class PaymentController
 
     }
 
-    public void CardValidation(boolean isValid)
-    {
-        isCash = false;
-
-        if (isValid == true)
-        {
-
-            cashDue = Database.getInstance().basketTotal;
-
-            showMessageDialog(null, "Payment Accepted");
-
-        }
-        else
-        {
-            showMessageDialog(null, "!Card Payment Failed!. Please try again or use another payment method.");
-
-        }
-
-
-
-
-    }
+    
 
     public BigDecimal CalculateChange()
     {
