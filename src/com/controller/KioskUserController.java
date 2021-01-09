@@ -30,7 +30,7 @@ public class KioskUserController
         databaseController.SaveStockData();
     }
 
-    public void ScanItem(String barcode) // Only usable in UnitTest
+    public void ScanItem(String barcode) 
     {
         for (int i = 0; i < Database.getInstance().stockType.size(); i++)
         {

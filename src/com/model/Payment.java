@@ -11,9 +11,9 @@ public class Payment
 
     private String companyName;
     private LocalDate dateofpurchase;
-    public BigDecimal moneyPaid;
-    public BigDecimal moneyDue;
-    public BigDecimal change;
+    private BigDecimal moneyPaid;
+    private BigDecimal moneyDue;
+    private BigDecimal change;
     private boolean isCashPayment;
 
     public Payment(BigDecimal newMoneyPaid, BigDecimal newMoneyDue, BigDecimal newChange, boolean isCash)

@@ -21,12 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="edb24861-5e49-4afe-b6a3-fe48bf2d32e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/KioskUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/KioskUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/AdminView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/AdminView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/PaymentView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/PaymentView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/ValidationView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/ValidationView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/ValidationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/ValidationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/StockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/StockData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Payment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,22 +136,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="466" height="447" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1610133345395" />
-    <state width="1877" height="224" key="GridCell.Tab.0.bottom" timestamp="1610206502993">
+    <state width="1877" height="224" key="GridCell.Tab.0.bottom" timestamp="1610209089599">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610206502993" />
-    <state width="1877" height="224" key="GridCell.Tab.0.center" timestamp="1610206502993">
+    <state width="1877" height="224" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610209089599" />
+    <state width="1877" height="224" key="GridCell.Tab.0.center" timestamp="1610209089599">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610206502993" />
-    <state width="1877" height="224" key="GridCell.Tab.0.left" timestamp="1610206502993">
+    <state width="1877" height="224" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610209089599" />
+    <state width="1877" height="224" key="GridCell.Tab.0.left" timestamp="1610209089599">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610206502993" />
-    <state width="1877" height="224" key="GridCell.Tab.0.right" timestamp="1610206502993">
+    <state width="1877" height="224" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610209089599" />
+    <state width="1877" height="224" key="GridCell.Tab.0.right" timestamp="1610209089599">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610206502993" />
+    <state width="1877" height="224" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610209089599" />
     <state width="1618" height="258" key="GridCell.Tab.1.bottom" timestamp="1610148336707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -179,5 +176,16 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1610029687032" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/model/Admin.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
