@@ -28,9 +28,10 @@ public class KioskUserController
         Database.getInstance().stockType.get(index).updateItemCount();
 
         databaseController.SaveStockData();
+
     }
 
-    public void ScanItem(String barcode) 
+    public void ScanItem(String barcode)
     {
         for (int i = 0; i < Database.getInstance().stockType.size(); i++)
         {
@@ -49,7 +50,6 @@ public class KioskUserController
 
         }
 
-
     }
 
     public void CalculateTotalBasket()
@@ -66,12 +66,7 @@ public class KioskUserController
 
         }
 
-
-
         Database.getInstance().basketTotal = totalCost;
-
-
-
 
     }
 
