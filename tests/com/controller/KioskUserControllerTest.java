@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class KioskUserControllerTest
 {
     private KioskUserController kioskUserController = new KioskUserController();
-    private StockType[] stockTypes;
+
     private StockType mango;
     private StockType apple;
     Database database = new Database();
@@ -23,7 +23,7 @@ class KioskUserControllerTest
     @BeforeEach
     void onSetup()
     {
-        
+
         // Create Stock barcodes
         ArrayList<String> barcodes01 = new ArrayList<>();
         barcodes01.add("ma000111000");
