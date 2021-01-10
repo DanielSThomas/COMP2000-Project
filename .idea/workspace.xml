@@ -21,8 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="edb24861-5e49-4afe-b6a3-fe48bf2d32e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP2000-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP2000-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000-Project/data/StockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000-Project/data/StockData.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/controller/KioskUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controller/KioskUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/KioskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/KioskView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/StockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/StockData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/com/controller/KioskUserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/com/controller/KioskUserControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +82,7 @@
       <recent name="C:\Users\alan\Desktop\DanStuff\Github\COMP2000-Project\src\com\view" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.KioskUserControllerTest.scanItem">
     <configuration name="KioskView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.view.KioskView" />
       <module name="COMP2000-Project" />
@@ -106,9 +109,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KioskUserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="COMP2000-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.controller.KioskUserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KioskUserControllerTest.scanItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="COMP2000-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.controller.KioskUserControllerTest" />
+      <option name="METHOD_NAME" value="scanItem" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.KioskUserControllerTest.scanItem" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.KioskUserControllerTest" />
         <item itemvalue="Application.KioskView" />
       </list>
     </recent_temporary>
@@ -153,22 +189,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="466" height="447" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1610133345395" />
-    <state width="1877" height="224" key="GridCell.Tab.0.bottom" timestamp="1610209089599">
+    <state width="1877" height="222" key="GridCell.Tab.0.bottom" timestamp="1610282573574">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610209089599" />
-    <state width="1877" height="224" key="GridCell.Tab.0.center" timestamp="1610209089599">
+    <state width="1877" height="222" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610282573574" />
+    <state width="1877" height="222" key="GridCell.Tab.0.center" timestamp="1610282573574">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610209089599" />
-    <state width="1877" height="224" key="GridCell.Tab.0.left" timestamp="1610209089599">
+    <state width="1877" height="222" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610282573574" />
+    <state width="1877" height="222" key="GridCell.Tab.0.left" timestamp="1610282573574">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610209089599" />
-    <state width="1877" height="224" key="GridCell.Tab.0.right" timestamp="1610209089599">
+    <state width="1877" height="222" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610282573574" />
+    <state width="1877" height="222" key="GridCell.Tab.0.right" timestamp="1610282573574">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610209089599" />
+    <state width="1877" height="222" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610282573574" />
     <state width="1618" height="258" key="GridCell.Tab.1.bottom" timestamp="1610148336707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -209,6 +245,11 @@
           <url>file://$PROJECT_DIR$/src/com/model/Admin.java</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tests/com/controller/KioskUserControllerTest.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -116,6 +116,7 @@ public class KioskView extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 kioskUserController.ScanItem(txtBarcode.getText());
+                kioskUserController.databaseController.SaveStockData();
 
                 kioskUserController.ViewBasket(defaultListModel2,lstBasket);
                 kioskUserController.ViewStockType(defaultListModel, lstStock);
