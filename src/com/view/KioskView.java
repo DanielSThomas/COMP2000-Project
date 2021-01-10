@@ -90,7 +90,7 @@ public class KioskView extends JFrame
                     kioskUserController.CalculateTotalBasket();
                     lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal));
                     
-                    btnFandP.setEnabled(true);
+
                 }
 
                 catch(Exception e1)

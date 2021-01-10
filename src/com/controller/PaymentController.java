@@ -65,7 +65,7 @@ public class PaymentController
 
             defaultListModel.add(defaultListModel.getSize(),Database.getInstance().payment.getCompanyName());
             defaultListModel.add(defaultListModel.getSize(),Database.getInstance().payment.getDateofpurchase());
-            defaultListModel.add(defaultListModel.getSize(), "Total Cost : £" + Database.getInstance().payment.getMoneyDue());
+            defaultListModel.add(defaultListModel.getSize(), "Total Cost : £" + Database.getInstance().basketTotal);
 
             if (Database.getInstance().payment.isCashPayment() == true)
             {

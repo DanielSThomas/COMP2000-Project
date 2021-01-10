@@ -13,7 +13,7 @@ class DatabaseControllerTest
 
     Database database = new Database();
     DatabaseController databaseController = new DatabaseController();
-    
+
     @AfterEach
     void tearDown()
     {

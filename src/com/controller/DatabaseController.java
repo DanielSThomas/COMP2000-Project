@@ -85,7 +85,6 @@ public class DatabaseController
         }
     }
 
-
     public void viewStockType(DefaultListModel<String> defaultListModel, JList jList)
     {
         defaultListModel.clear();
@@ -121,7 +120,6 @@ public class DatabaseController
     {
         Database.getInstance().stockType.remove(index.intValue());
     }
-
 
     public void orderStock(Integer index, Integer orderCount)
     {
