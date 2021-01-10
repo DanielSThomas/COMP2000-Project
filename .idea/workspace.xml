@@ -82,7 +82,7 @@
       <recent name="C:\Users\alan\Desktop\DanStuff\Github\COMP2000-Project\src\com\view" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.KioskUserControllerTest.scanItem">
+  <component name="RunManager" selected="JUnit.KioskUserControllerTest">
     <configuration name="KioskView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.view.KioskView" />
       <module name="COMP2000-Project" />
@@ -124,6 +124,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KioskUserControllerTest.calculateTotalBasket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="COMP2000-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.controller.KioskUserControllerTest" />
+      <option name="METHOD_NAME" value="calculateTotalBasket" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KioskUserControllerTest.scanItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="COMP2000-Project" />
       <extension name="coverage">
@@ -142,9 +158,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.KioskUserControllerTest" />
+        <item itemvalue="JUnit.KioskUserControllerTest.calculateTotalBasket" />
         <item itemvalue="JUnit.KioskUserControllerTest.scanItem" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.KioskUserControllerTest" />
         <item itemvalue="Application.KioskView" />
       </list>
     </recent_temporary>
@@ -189,38 +206,38 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="466" height="447" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1610133345395" />
-    <state width="1877" height="222" key="GridCell.Tab.0.bottom" timestamp="1610282573574">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1610284749615">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="222" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610282573574" />
-    <state width="1877" height="222" key="GridCell.Tab.0.center" timestamp="1610282573574">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610284749615" />
+    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1610284749615">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="222" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610282573574" />
-    <state width="1877" height="222" key="GridCell.Tab.0.left" timestamp="1610282573574">
+    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610284749615" />
+    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1610284749615">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="222" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610282573574" />
-    <state width="1877" height="222" key="GridCell.Tab.0.right" timestamp="1610282573574">
+    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610284749615" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1610284749615">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="222" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610282573574" />
-    <state width="1618" height="258" key="GridCell.Tab.1.bottom" timestamp="1610148336707">
+    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610284749615" />
+    <state width="1877" height="265" key="GridCell.Tab.1.bottom" timestamp="1610284411972">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1618" height="258" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610148336707" />
-    <state width="1618" height="258" key="GridCell.Tab.1.center" timestamp="1610148336707">
+    <state width="1877" height="265" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610284411972" />
+    <state width="1877" height="265" key="GridCell.Tab.1.center" timestamp="1610284411972">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1618" height="258" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610148336707" />
-    <state width="1618" height="258" key="GridCell.Tab.1.left" timestamp="1610148336707">
+    <state width="1877" height="265" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610284411972" />
+    <state width="1877" height="265" key="GridCell.Tab.1.left" timestamp="1610284411972">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1618" height="258" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610148336707" />
-    <state width="1618" height="258" key="GridCell.Tab.1.right" timestamp="1610148336707">
+    <state width="1877" height="265" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610284411972" />
+    <state width="1877" height="265" key="GridCell.Tab.1.right" timestamp="1610284411972">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1618" height="258" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610148336707" />
+    <state width="1877" height="265" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610284411972" />
     <state x="438" y="105" key="SettingsEditor" timestamp="1610064816963">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -245,11 +262,6 @@
           <url>file://$PROJECT_DIR$/src/com/model/Admin.java</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tests/com/controller/KioskUserControllerTest.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

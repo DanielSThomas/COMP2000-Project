@@ -27,7 +27,7 @@ public class KioskUserController
 
         Database.getInstance().stockType.get(index).updateItemCount();
 
-        databaseController.SaveStockData();
+       // databaseController.SaveStockData();
 
     }
 

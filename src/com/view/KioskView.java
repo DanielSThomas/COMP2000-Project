@@ -82,6 +82,7 @@ public class KioskView extends JFrame
                 {
                     selectedIndex = lstStock.getSelectedIndex();
                     kioskUserController.AddToBasket(selectedIndex);
+                    kioskUserController.databaseController.SaveStockData();
 
                     kioskUserController.ViewBasket(defaultListModel2,lstBasket);
                     kioskUserController.ViewStockType(defaultListModel, lstStock);
