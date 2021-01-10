@@ -13,16 +13,7 @@ class DatabaseControllerTest
 
     Database database = new Database();
     DatabaseController databaseController = new DatabaseController();
-
-
-    @BeforeEach
-    void setUp()
-    {
-
-
-
-    }
-
+    
     @AfterEach
     void tearDown()
     {
@@ -31,7 +22,7 @@ class DatabaseControllerTest
     }
 
     @Test
-    void loadStockData() //Tests the loading of stock data
+    void loadStockData() //Tests the loading and displaying of stock data
     {
         databaseController.LoadStockData();
 
@@ -43,7 +34,7 @@ class DatabaseControllerTest
     }
 
     @Test
-    void loadAllStockData() //Tests the loading of stock data and individual barcodes
+    void loadAllStockData() //Tests the loading and displaying of stock data and individual barcodes
     {
         databaseController.LoadStockData();
 
@@ -77,37 +68,4 @@ class DatabaseControllerTest
 
     }
 
-    @Test
-    void createStockType()
-    {
-
-    }
-
-    @Test
-    void editStockType()
-    {
-
-
-    }
-
-    @Test
-    void deleteStockType()
-    {
-
-
-    }
-
-    @Test
-    void orderStock()
-    {
-
-
-    }
-
-    @Test
-    void deleteStock()
-    {
-
-
-    }
 }

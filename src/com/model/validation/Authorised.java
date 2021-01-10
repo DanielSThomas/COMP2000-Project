@@ -18,7 +18,6 @@ public class Authorised implements IState
 
         validation.setState(new Unauthorised());
 
-
     }
 
     @Override
@@ -27,7 +26,5 @@ public class Authorised implements IState
         System.out.println("Payment is authorised");
 
         return true;
-
-
     }
 }

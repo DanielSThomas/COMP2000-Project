@@ -13,11 +13,7 @@ public class Unauthorised implements IState
     @Override
     public void CompletePayment(Validation validation)
     {
-
         validation.setState(this);
-
-
-
     }
 
     @Override

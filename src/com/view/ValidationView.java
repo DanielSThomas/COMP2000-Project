@@ -98,7 +98,7 @@ public class ValidationView extends JFrame
                 }
 
 
-                //validationController.validation.CompletePayment();
+
 
             }
         });
