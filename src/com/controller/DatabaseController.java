@@ -60,7 +60,7 @@ public class DatabaseController
         {
             File stockData = new File("src/data/StockData.txt");
             PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(stockData)));
-            //BufferedWriter bw = new BufferedWriter(new FileWriter(stockData));
+
 
             for (StockType stocktype: Database.getInstance().stockType)
             {

@@ -55,6 +55,7 @@ public class KioskView extends JFrame
         kioskView.setPreferredSize(new Dimension(500,500));
 
         kioskUserController.ViewBasket(defaultListModel2,lstBasket);
+
         lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal));
 
         kioskView.pack();
