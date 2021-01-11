@@ -19,7 +19,6 @@ public class PaymentController
     public BigDecimal change = new BigDecimal(0.0).setScale(2, RoundingMode.HALF_EVEN);
     public boolean isCash;
 
-
     public void CalculateCash(JTextField input, JLabel output)
     {
 
@@ -32,8 +31,6 @@ public class PaymentController
         isCash = true;
 
     }
-
-
 
     public BigDecimal CalculateChange()
     {

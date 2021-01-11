@@ -27,7 +27,7 @@ public class KioskUserController
 
         Database.getInstance().stockType.get(index).updateItemCount();
 
-       // databaseController.SaveStockData();
+
 
     }
 
@@ -44,7 +44,7 @@ public class KioskUserController
 
                     Database.getInstance().stockType.get(i).updateItemCount();
 
-                   // databaseController.SaveStockData();
+                   
                 }
             }
 
@@ -96,7 +96,5 @@ public class KioskUserController
     {
         databaseController = new DatabaseController();
     }
-
-
 
 }

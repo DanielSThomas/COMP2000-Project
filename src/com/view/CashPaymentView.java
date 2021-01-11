@@ -58,7 +58,6 @@ public class CashPaymentView extends JFrame
             public void actionPerformed(ActionEvent e)
             {
 
-
                 paymentController.StorePaymentDetails();
 
                 guiController.InitialiseGui("ReceiptView");

@@ -164,7 +164,7 @@ public class AdminView extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                //Pass the selected index to the database for late access by the editview
+                //Pass the selected index to the database for later access by the editview
                 Database.getInstance().storedInt = selectedIndex;
 
                 guiController.InitialiseGui("EditStockTypeView");

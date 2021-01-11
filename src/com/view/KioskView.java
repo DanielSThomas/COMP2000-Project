@@ -42,6 +42,7 @@ public class KioskView extends JFrame
         kioskUserController = new KioskUserController();
 
         kioskUserController.InitialiseDataBaseController();
+
         kioskUserController.databaseController.LoadStockData();
 
         defaultListModel = new DefaultListModel<String>();
@@ -52,6 +53,7 @@ public class KioskView extends JFrame
         kioskView.setContentPane(kioskPanel);
         kioskView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         kioskView.setPreferredSize(new Dimension(500,500));
+
         kioskUserController.ViewBasket(defaultListModel2,lstBasket);
         lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal));
 
@@ -72,7 +74,6 @@ public class KioskView extends JFrame
         });
 
 
-
         btnAddItem.addActionListener(new ActionListener()
         {
             @Override
@@ -89,8 +90,6 @@ public class KioskView extends JFrame
 
                     kioskUserController.CalculateTotalBasket();
                     lblTotalCost.setText("Total Cost £" + String.valueOf(Database.getInstance().basketTotal));
-                    
-
                 }
 
                 catch(Exception e1)
